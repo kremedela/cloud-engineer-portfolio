@@ -1,0 +1,5 @@
+EmployeeID,FirstName,LastName,Email,Department,Status
+101,John,Doe,john.doe@example.com,IT,Active
+102,Jane,Smith,jane.smith@example.com,HR,Inactive
+103,Emily,Johnson,emily.johnson@example.com,Finance,Active
+104,Michael,Brown,michael.brown@example.com,Marketing,Active

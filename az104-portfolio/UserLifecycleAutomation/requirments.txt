@@ -1,0 +1,4 @@
+msgraph-core==0.6.0
+azure-identity==1.14.0
+pandas==2.1.0
+pytest==8.0.0
