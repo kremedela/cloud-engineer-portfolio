@@ -1,0 +1,7 @@
+﻿{
+  ""AppSettings"": {
+    ""UserAssignmentRequired"": false,
+    ""SingleSignOnMode"": ""Password"",
+    ""RedirectUris"": [""https://myapp.com/signin-oidc""]
+  }
+}

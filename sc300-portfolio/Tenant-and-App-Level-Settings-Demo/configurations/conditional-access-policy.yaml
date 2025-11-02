@@ -1,0 +1,8 @@
+﻿Name: Require MFA for External Users
+Conditions:
+  Users:
+    Include: AllExternalUsers
+  SignInRisk: High
+GrantControls:
+  RequireMFA: true
+State: Enabled

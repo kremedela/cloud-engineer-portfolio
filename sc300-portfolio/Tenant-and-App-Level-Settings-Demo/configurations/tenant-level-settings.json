@@ -1,0 +1,7 @@
+﻿{
+  ""TenantSettings"": {
+    ""UserAssignmentRequired"": true,
+    ""MultiTenant"": true,
+    ""DefaultSSOMode"": ""SAML""
+  }
+}
