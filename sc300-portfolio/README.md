@@ -1,151 +1,134 @@
-# cloud-engineer-portfolio
-A multi-skill portfolio showcasing my projects in Python, Terraform, and Azure.
-<h1 align="center">☁️ Cloud Engineer Portfolio</h1>
+🛡️ Identity & Access Management Portfolio (SC-300)
 
-<p align="center">
-  <b>Python • Terraform • Microsoft Azure • Security • Automation</b><br>
-  <i>Hands-on portfolio demonstrating real-world projects across Azure and cloud technologies</i>
-</p>
+“Identity is the foundation of security — when it’s managed well, everything else follows.”
 
-<p align="center">
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" /></a>
-  <a href="https://www.terraform.io/"><img src="https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform&logoColor=white" /></a>
-  <a href="https://learn.microsoft.com/en-us/certifications/"><img src="https://img.shields.io/badge/Microsoft%20Certified-Azure%20Engineer-0078D4?logo=microsoftazure&logoColor=white" /></a>
-</p>
+👋 About Me
 
----
+Hi, I’m Euron Pennyman, a Microsoft Certified Identity and Access Administrator (SC-300) dedicated to designing and implementing secure, scalable identity solutions.
 
-## 🚀 Overview
+I specialize in Azure Active Directory, Conditional Access, and Zero Trust security, helping organizations protect digital assets while enabling seamless access for users. My focus is on reducing risk, enforcing governance, and streamlining authentication across cloud and hybrid environments.
 
-Welcome to my **Cloud Engineering Portfolio**, a collection of real-world projects that demonstrate my ability to design, deploy, secure, and automate solutions across **Azure**, **Microsoft 365**, **Terraform**, and **Python**.
+I view identity not just as credentials — but as the foundation of trust, security, and productivity in modern enterprise ecosystems.
 
-Each section aligns with a core technical area or Microsoft certification and includes **hands-on projects**, **code samples**, and **documentation**.
+🌐 Portfolio Overview
 
-| Portfolio | Focus | Example Skills Demonstrated |
-|------------|--------|-----------------------------|
-| 🐍 [Python Portfolio](./python-portfolio) | Automation, Data Integration, SDKs | Azure SDK, REST APIs, Data Pipelines |
-| 🌍 [Terraform Portfolio](./terraform-portfolio) | Infrastructure as Code | Azure IaC, State Management, Modules |
-| 🔐 [SC-300 Portfolio](./sc300-portfolio) | Identity & Access Management | Azure AD, Conditional Access, PIM |
-| 💼 [MS-102 Portfolio](./ms102-portfolio) | Microsoft 365 Administration | Exchange, Intune, Defender Policies |
-| ☁️ [AZ-104 Portfolio](./az104-portfolio) | Azure Administration | VM Deployment, Monitoring, Backups |
-| 💻 [AZ-204 Portfolio](./az204-portfolio) | Azure Development | Functions, APIs, Logic Apps |
-| 🔒 [AZ-500 Portfolio](./az500-portfolio) | Azure Security Engineering | Sentinel, Key Vault, Security Center |
-| 🏛️ [AZ-305 Portfolio](./az305-portfolio) | Azure Solutions Architecture | Design Patterns, Networking, Security, High Availability, Cost Management |
+This repository showcases practical projects, configurations, and labs aligned with the SC-300 certification objectives and real-world enterprise identity challenges.
 
----
+Each project demonstrates:
 
-## 🧰 Tools & Technologies
+Architecture and workflow diagrams for identity and access solutions
 
-| Category | Technologies |
-|-----------|---------------|
-| **Programming & Automation** | Python, PowerShell, Bash, REST APIs |
-| **Cloud** | Microsoft Azure, Microsoft 365, Azure DevOps |
-| **Infrastructure** | Terraform, ARM Templates, Bicep |
-| **Security** | Azure Key Vault, Defender for Cloud, Sentinel |
-| **Monitoring & Analytics** | Azure Monitor, Log Analytics, Application Insights |
-| **Version Control & CI/CD** | GitHub, GitHub Actions, Azure Pipelines |
+Policy configuration and deployment in Azure AD
 
----
+Security design considerations and trade-offs
 
-## 🧠 Project Highlights
+Automation scripts and monitoring strategies
 
-Here are a few sample projects from the portfolio (see each section for full details):
+🧩 Core Focus Areas
 
-### 🐍 Python — Azure Resource Automation
-Automates deployment of resource groups, storage accounts, and VMs using the Azure Python SDK.  
-**Key Skills:** Azure SDK, REST APIs, JSON, Authentication via Managed Identity  
-➡️ [View Project](./python-portfolio/project-1-azure-resource-automation)
+Identity Management
 
----
+User, group, and device lifecycle management
 
-### 🌍 Terraform — Secure Azure Infrastructure
-Builds a production-ready multi-environment Azure setup using Terraform modules.  
-**Key Skills:** Variables, Outputs, Remote State, CI/CD with Azure DevOps  
-➡️ [View Project](./terraform-portfolio/project-1-azure-infra-modules)
+Hybrid identity using Azure AD Connect
 
----
+Role-Based Access Control (RBAC) and delegated administration
 
-### 🔐 SC-300 — Conditional Access Policy Automation
-Implements automated user onboarding and conditional access enforcement using Microsoft Graph API.  
-**Key Skills:** Azure AD, Identity Governance, Conditional Access Policies  
-➡️ [View Project](./sc300-portfolio/project-1-user-lifecycle-automation)
+Access Management
 
----
+Conditional Access policies and MFA enforcement
 
-### 🔒 AZ-500 — Sentinel Security Playbook
-Automates detection and remediation of threats using Azure Sentinel and Logic Apps.  
-**Key Skills:** SIEM, SOAR, Security Incident Automation  
-➡️ [View Project](./az500-portfolio/project-1-security-center)
+Privileged Identity Management (PIM) for just-in-time access
 
----
+Single Sign-On (SSO) integration with cloud and on-premises apps
 
-### 🏛️ AZ-305 — Architecture & Solution Design
-Designs and implements complex Azure solutions that meet business and technical requirements.  
-**Key Skills:** Solution Design, Networking, Identity, Security, High Availability, Cost Optimization  
-➡️ [View Project](./az305-portfolio/project-1-architecture-solution)
+Authentication & Security
 
----
+Passwordless authentication with FIDO2, Microsoft Authenticator, Windows Hello
 
-## 📸 Portfolio Preview
+Identity Protection and risk-based policies
 
-<p align="center">
-  <img src="docs/portfolio-overview-diagram.png" width="80%" alt="Portfolio Overview Diagram" />
-</p>
+Zero Trust principles applied across environments
 
----
+Monitoring & Governance
 
-## 📂 Repository Structure
+Audit logging, reporting, and alerting with Azure AD and Microsoft Sentinel
 
-cloud-engineer-portfolio/
-│
-├── python-portfolio/
-├── terraform-portfolio/
-├── sc300-portfolio/
-├── ms102-portfolio/
-├── az104-portfolio/
-├── az204-portfolio/
-├── az500-portfolio/
-└── az305-portfolio/
+Secure Score and compliance monitoring
 
-Each folder includes:
-- `README.md` — Project overview, architecture, and results  
-- `/code` — Source code or scripts  
-- `/docs` — Diagrams, flowcharts, and design notes  
-- `/screenshots` — Proof of deployment and results  
+Access reviews and automated governance processes
 
----
+🧠 Project Highlights
+| Project                                    | Description                                                                                     | Key Skills                                |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| **Zero Trust Identity Implementation**     | Designed and deployed Azure AD Conditional Access, MFA, and PIM to enforce Zero Trust security. | Zero Trust, Conditional Access, MFA, PIM  |
+| **Hybrid Identity with Azure AD Connect**  | Enabled seamless cloud and on-premises authentication for enterprise users.                     | Hybrid Identity, SSO, Synchronization     |
+| **Passwordless Authentication Lab**        | Implemented FIDO2 and Microsoft Authenticator passwordless login for employees.                 | Security, Authentication, User Experience |
+| **Access Reviews & Governance Automation** | Built automated access review workflows using Azure AD and PowerShell.                          | Governance, Compliance, Automation        |
+| **Application SSO & Conditional Access**   | Configured SSO and conditional access for multiple SaaS applications.                           | SSO, Conditional Access, Policy Design    |
 
-## 🧭 Certification Alignment
+🧰 Tools & Technologies
+| Category                       | Tools                                                                 |
+| ------------------------------ | --------------------------------------------------------------------- |
+| **Identity & Access**          | Azure AD, Azure AD Connect, Conditional Access, PIM                   |
+| **Security & Authentication**  | MFA, FIDO2, Microsoft Authenticator, Windows Hello                    |
+| **Monitoring & Reporting**     | Azure AD Audit Logs, Secure Score, Access Reviews, Microsoft Sentinel |
+| **Applications & Integration** | SSO, OAuth2, OpenID Connect, SCIM provisioning                        |
+| **Automation**                 | PowerShell, Graph API, Azure AD Templates                             |
 
-| Certification | Demonstrated Skills |
-|----------------|--------------------|
-| **AZ-104** | Azure Administration, VM Networking, Monitoring |
-| **AZ-204** | App Services, Functions, API Management |
-| **AZ-500** | Security Center, Sentinel, Key Vault, Threat Detection |
-| **SC-300** | Identity Lifecycle, Access Reviews, PIM |
-| **MS-102** | Microsoft 365, Exchange, Intune, Defender |
-| **Terraform** | IaC, Modular Design, CI/CD |
-| **Python** | Automation, SDKs, Scripting, Data Handling |
-| **AZ-305** | Solution Architecture, Networking, Security, High Availability, Cost Optimization |
+🎓 Certification Alignment
 
----
+This portfolio aligns with the Microsoft Certified: Identity and Access Administrator Associate (SC-300) exam objectives:
 
-## 🧩 How to Use This Portfolio
+Implement an identity management solution
 
-1. **Explore each folder** for hands-on project examples  
-2. **Read the documentation** (`README.md` files) for scenarios and outcomes  
-3. **Check the code** in `/code` directories to see implementation details  
-4. **View screenshots** in `/screenshots` to confirm working solutions  
+Implement an authentication and access management solution
 
----
+Implement access management for apps
 
-## 🤝 Connect With Me
+Plan and implement identity governance
+
+📘 Each project includes:
+
+Architecture diagrams and design notes
+
+Policy configurations and security models
+
+Deployment scripts and testing documentation
+
+Risk assessment and compliance considerations
+
+💡 Identity Philosophy
+
+My approach to identity and access management is guided by three principles:
+
+Secure by design — every identity decision reduces risk without blocking productivity.
+
+Automation first — repeatable processes ensure compliance, efficiency, and scalability.
+
+User-centric security — secure access should be seamless, intuitive, and minimally disruptive.
+
+“Managing identity isn’t about control — it’s about enabling secure access with confidence.”
+
+🌱 Future Focus
+
+I am actively expanding my SC-300 expertise through:
+
+Advanced conditional access scenarios for complex enterprise environments
+
+Identity protection using Microsoft Sentinel and automated risk analytics
+
+Lifecycle automation for hybrid and multi-cloud environments
+
+Integration of Azure AD with SaaS apps at scale
+
+🤝 Connect With Me
 
 <p align="center">
   <a href="https://www.linkedin.com/in/euron-pennyman-499018376/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:YOUR.EMAIL@domain.com">
+  <a href="mailto:euron.pennyman@midnightmoonlight.org ">
     <img src="https://img.shields.io/badge/Email-Contact-red?logo=gmail&logoColor=white" />
   </a>
   <a href="https://github.com/kremedela/cloud-engineer-portfolio">
