@@ -1,0 +1,62 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+(Placed in /docs/LabSteps.txt)
+
+Step 1 — Review Guest User Properties
+Log into Azure Portal.
+Navigate to Microsoft Entra → Users → All users → filter: UserType = Guest.
+Select one of your previously invited guest accounts.
+Review the following sections:
+
+Identity info
+
+Contact info
+
+Groups and roles
+
+Authentication methods
+
+Activity (last sign-in, app usage)
+
+📸 Screenshot #1: Guest user profile overview (/screenshots/01-user-profile.png)
+
+Step 2 — Modify Guest User Roles and Group Membership
+Still under the selected guest user:
+Go to Assigned roles → Add a role (e.g., Teams Administrator, Guest Inviter, or a custom role).
+Then go to Groups → Add the guest to a test Microsoft 365 group or security group.
+
+📸 Screenshot #2: Role assignment screen (/screenshots/02-role-assignment.png)
+📸 Screenshot #3: Group membership screen (/screenshots/03-group-membership.png)
+
+Step 3 — Reset Invitation or Redemption State
+If a guest user did not accept the invite:
+Go to Microsoft Entra → Users → Guest users
+Select the user
+Click Resend invitation
+If the guest user needs a fresh link:
+Use Reset redemption status (if available in your tenant).
+
+📸 Screenshot #4: Resend invitation button (/screenshots/04-resend-invite.png)
+
+Step 4 — Review Guest User Sign-In Logs
+Navigate to Monitoring → Sign-in logs
+Filter by the guest user account.
+Check:
+
+Was the login successful?
+
+Which apps were accessed?
+
+Conditional access applied?
+
+📸 Screenshot #5: Guest user sign-in log results (/screenshots/05-signin-logs.png)
+
+Step 5 — Block or Remove Guest User Access
+Go to the guest user profile.
+To temporarily block access:
+Toggle Block sign-in: Yes
+To remove completely:
+Click Delete user → Confirm deletion.
+
+📸 Screenshot #6: Block sign-in settings (/screenshots/06-block-signin.png)
+📸 Screenshot #7: User deletion screen (/screenshots/07-delete-user.png)

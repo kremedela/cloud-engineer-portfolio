@@ -1,0 +1,70 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Administrative Units and Their Purpose
+Log into the Azure Portal.
+Navigate to Microsoft Entra → Administrative units.
+Review Microsoft’s description: AUs allow delegation of administrative tasks to specific sets of users.
+Look at examples where AUs would be useful:
+
+Separate admin control by department
+
+Managing regional offices
+
+Scoping Helpdesk to specific users
+📸 (/screenshots/01-au-overview.png)
+
+Step 2 — Create an Administrative Unit
+Navigate to Microsoft Entra → Administrative units → Create.
+Configure:
+
+Name: “HR-Administrative-Unit”
+
+Description: “Contains HR users and groups for delegated administration.”
+Confirm and create.
+📸 (/screenshots/02-create-au.png)
+
+Step 3 — Add Users and Groups to the Administrative Unit
+Select the AU → Members → Add.
+Add:
+
+Your HR test user
+
+Your HR test group (optional)
+Confirm assignments.
+📸 (/screenshots/03-au-members.png)
+
+Step 4 — Assign a Scoped Role to a Test Administrator
+Navigate within the AU → Roles and administrators → Add assignment.
+Choose a role such as:
+
+User Administrator
+
+Groups Administrator
+Select your “HR Helpdesk Admin” test user you created earlier.
+Scope = HR-Administrative-Unit (default).
+Assign the role.
+📸 (/screenshots/04-au-role-assignment.png)
+
+Step 5 — Validate Scoped Permissions Using Test Account
+Open a separate browser or a private window.
+Sign in as your HR Helpdesk Admin test account.
+Try accessing users that are NOT inside the AU → Should see "Access Denied."
+Try accessing users inside the AU → Should allow limited management actions.
+Common allowed tasks:
+
+Reset password for AU members
+
+Update user properties (if role allows)
+📸 (/screenshots/05-effective-permissions.png)
+
+Step 6 — Compare Global vs AU-Scoped Role Behavior
+Return to your primary admin session.
+Assign your HR Helpdesk Admin account a global User Administrator role temporarily.
+Repeat the same actions using the test account.
+Confirm:
+
+Global role = full user management
+
+AU-scoped role = limited to AU members only
+Remove the global assignment when done.
+📸 (/screenshots/06-role-comparison.png)

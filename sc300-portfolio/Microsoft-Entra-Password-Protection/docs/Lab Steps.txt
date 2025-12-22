@@ -1,0 +1,66 @@
+Lab Steps
+
+Step 1 — Review Built-In Password Protection Settings
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Protection → Password protection.
+
+Review Microsoft’s global banned password list and default enforcement behavior.
+
+📸 Screenshot #1: Password protection overview (/screenshots/01-password-protection-overview.png)
+
+Step 2 — Configure Custom Banned Password List
+
+In the same blade, select Custom banned passwords.
+
+Add weak or org-specific terms such as:
+
+company name
+
+product names
+
+seasonal passwords (e.g., Summer2025)
+
+Save changes.
+
+📸 Screenshot #2: Custom banned password list (/screenshots/02-custom-banned-passwords.png)
+
+Step 3 — Configure Smart Lockout Settings
+
+Navigate to Microsoft Entra → Protection → Password protection → Smart lockout.
+
+Configure the following settings:
+
+Lockout threshold (e.g., 5 attempts)
+
+Lockout duration (e.g., 60 seconds)
+
+Enable additional lockout protections for Azure AD Hybrid tenants (if applicable).
+
+Save settings.
+
+📸 Screenshot #3: Smart lockout configuration (/screenshots/03-smart-lockout.png)
+
+Step 4 — Test Password Change Behavior Using a Test User
+
+Log in as a test user at https://myaccount.microsoft.com
+.
+
+Attempt to change the password using one of the banned terms.
+
+Confirm that password reset fails and displays blocked password messages.
+
+Then complete a valid password change using a compliant password.
+
+📸 Screenshot #4: Failed password change attempt (/screenshots/04-password-change-failed.png)
+
+Step 5 — Review Password Protection Audit Logs
+
+Go to Microsoft Entra → Monitoring → Audit logs.
+
+Filter logs by Password policy or Password validation events.
+
+Confirm that blocked password attempts and lockouts appear.
+
+📸 Screenshot #5: Password protection audit log entries (/screenshots/05-password-protection-logs.png)

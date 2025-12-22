@@ -1,0 +1,111 @@
+# Environment Strategy (Dev-Test-Prod)
+
+---
+
+## ✅ Step 1 — Create the Three Environments
+1. Go to **Power Platform Admin Center**  
+2. Environments → **+ New**  
+3. Create the following:
+
+### Dev Environment
+- Type: **Developer** (or Sandbox)  
+- Name: **PP-DEV**  
+- Purpose: Build and development  
+
+### Test Environment
+- Type: **Sandbox**  
+- Name: **PP-TEST**  
+- Purpose: UAT, QA  
+
+### Prod Environment
+- Type: **Production**  
+- Name: **PP-PROD**  
+- Purpose: Live workloads  
+
+---
+
+## ✅ Step 2 — Configure Access (RBAC)
+Set environment-level permissions:
+
+### Dev  
+- Makers: Allowed  
+- Admins: You  
+- Users: Limited  
+
+### Test  
+- Very limited makers  
+- Testers group has user access  
+- No build or customization allowed  
+
+### Prod  
+- **No makers**  
+- Only Admins deploy managed solutions  
+- End users have app access only  
+
+---
+
+## ✅ Step 3 — Create an Unmanaged Solution in Dev
+Inside **PP-DEV**:
+
+1. Go to **Power Apps → Solutions**  
+2. Select **+ New Solution**  
+3. Name: `IncidentManagement`  
+4. Version: `1.0.0.0`  
+5. Publisher: Your custom publisher  
+6. Add components (tables, flows, apps, etc.)
+
+All development work happens here.
+
+---
+
+## ✅ Step 4 — Export the Solution (Managed)
+Still in **DEV**:
+
+1. Select the solution  
+2. Click **Export**  
+3. Choose:
+   - **Managed**
+   - Version: `1.0.0.1`
+4. Download `.zip` file
+
+---
+
+## ✅ Step 5 — Import Solution into TEST
+Go to **PP-TEST**:
+
+1. Power Apps → Solutions → **Import**  
+2. Select the managed `.zip`  
+3. Publish all customizations  
+4. Validate:
+   - App loads  
+   - Flows connected  
+   - No missing environment variables  
+
+Perform **UAT testing**.
+
+---
+
+## ✅ Step 6 — Promote From Test → Prod
+Once approved:
+
+1. Re-export updated solution from Dev (managed)  
+2. Import into **PP-PROD**  
+3. Lock down permissions  
+4. Validate production run
+
+This is your real deployment.
+
+---
+
+## ✅ Step 7 — Document Governance Model
+Include:
+- Naming conventions  
+- Solution versioning  
+- Maker permissions  
+- Data loss prevention (DLP) policies  
+- Deployment checklist  
+
+---
+
+## 🎉 Completion
+You now have a complete Dev–Test–Prod strategy and workflow for Power Platform ALM.

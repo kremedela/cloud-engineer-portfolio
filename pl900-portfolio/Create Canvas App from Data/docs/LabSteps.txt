@@ -1,0 +1,83 @@
+# 🧪 Create Canvas App from Data (Step-by-Step)
+
+## Step 1 — Navigate to Power Apps
+1. Go to **https://make.powerapps.com**
+2. Select your environment from the top right.
+
+📸 *Screenshot: Power Apps home screen*
+
+---
+
+## Step 2 — Start a New Canvas App
+1. Select **Create**  
+2. Under *Start from Data*, choose  
+   - **Dataverse** table, OR  
+   - **SharePoint** list, OR  
+   - **Upload Excel**, OR  
+   - **SQL Server**
+
+📸 *Screenshot: Start from data selection screen*
+
+---
+
+## Step 3 — Choose Your Data Table
+1. Pick the table/list containing your records.
+2. Click **Connect**.
+
+📸 *Screenshot: Table selection panel*
+
+---
+
+## Step 4 — Auto-generate the App
+1. Power Apps will create:
+   - Browse screen
+   - Detail screen
+   - Edit screen  
+
+📸 *Screenshot: Auto-generated 3–screen layout*
+
+---
+
+## Step 5 — Customize the Browse Screen
+1. Select the Gallery  
+2. Modify:
+   - Fields shown  
+   - Sort order  
+   - Search box behavior  
+
+📸 *Screenshot: Editing the gallery fields*
+
+---
+
+## Step 6 — Configure the Detail & Edit Screens
+1. Update the form layout  
+2. Add/remove fields  
+3. Enable validation  
+
+📸 *Screenshot: Editing form fields*
+
+---
+
+## Step 7 — Test the App
+1. Click **Play (▶️)**  
+2. Test:
+   - Browsing  
+   - Viewing  
+   - Editing  
+   - Creating records  
+
+📸 *Screenshot: Running the Canvas App*
+
+---
+
+## Step 8 — Save and Publish
+1. Go to **File → Save**  
+2. Click **Publish**  
+3. Share with users  
+
+📸 *Screenshot: Publish screen*
+
+---
+
+## ✔ End of Lab
+Your app is now live and connected to real data.

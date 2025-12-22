@@ -1,0 +1,59 @@
+============================================================
+SC-300 — Configure App Authentication
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Register Test Application
+------------------------------------------------------------
+1. Navigate to Entra Admin Center → App Registrations
+2. Click "New Registration"
+3. Name: "SC-300 Auth Test App"
+4. Redirect URI: optional for testing flows
+5. Click "Register"
+
+📸 Screenshot: /screenshots/01-register-app.png
+
+------------------------------------------------------------
+Step 2 — Configure Client Secret
+------------------------------------------------------------
+1. Select the registered app → Certificates & Secrets
+2. Click "New client secret"
+3. Add description and expiration
+4. Copy value for testing
+5. Save changes
+
+📸 Screenshot: /screenshots/02-client-secret.png
+
+------------------------------------------------------------
+Step 3 — Configure Certificate Authentication
+------------------------------------------------------------
+1. Select "Certificates & Secrets" → Upload certificate
+2. Choose valid public key certificate
+3. Confirm upload
+4. Ensure certificate is active for authentication
+
+📸 Screenshot: /screenshots/03-certificate-auth.png
+
+------------------------------------------------------------
+Step 4 — Validate OAuth2 / OIDC Flows
+------------------------------------------------------------
+1. Use Postman or test script to request a token
+2. Select client credentials / authorization code flow
+3. Verify access token is issued
+4. Confirm claims and scopes are correct
+
+📸 Screenshot: /screenshots/04-token-validation.png
+
+------------------------------------------------------------
+Step 5 — Review App Authentication Settings
+------------------------------------------------------------
+1. Navigate back to App Registration → Overview
+2. Verify authentication methods configured
+3. Ensure no expired secrets or certificates exist
+
+📸 Screenshot: /screenshots/05-auth-settings.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

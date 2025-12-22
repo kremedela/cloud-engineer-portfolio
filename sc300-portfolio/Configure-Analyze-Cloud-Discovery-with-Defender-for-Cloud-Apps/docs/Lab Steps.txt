@@ -1,0 +1,61 @@
+============================================================
+SC-300 — Configure & Analyze Cloud Discovery with MDCA
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Enable Cloud Discovery
+------------------------------------------------------------
+1. Navigate to MDCA portal
+2. Go to Cloud Discovery → Settings
+3. Enable the Cloud Discovery feature
+
+📸 Screenshot: /screenshots/01-enable-cloud-discovery.png
+
+------------------------------------------------------------
+Step 2 — Connect Log Sources
+------------------------------------------------------------
+1. Choose log sources (firewall, proxy, endpoint)
+2. Configure upload schedules or real-time collection
+3. Validate connection
+
+📸 Screenshot: /screenshots/02-connect-log-sources.png
+
+------------------------------------------------------------
+Step 3 — Upload Traffic Logs
+------------------------------------------------------------
+1. Collect traffic logs from your environment
+2. Upload logs into MDCA
+3. Monitor processing status
+
+📸 Screenshot: /screenshots/03-upload-logs.png
+
+------------------------------------------------------------
+Step 4 — Analyze Discovered Applications
+------------------------------------------------------------
+1. Navigate to Discovered Apps
+2. Review app names, categories, and usage metrics
+3. Identify unsanctioned or high-risk apps
+
+📸 Screenshot: /screenshots/04-analyze-apps.png
+
+------------------------------------------------------------
+Step 5 — Identify Risky Applications
+------------------------------------------------------------
+1. Review risk score assigned by MDCA
+2. Flag apps that violate company policy or security standards
+
+📸 Screenshot: /screenshots/05-risky-apps.png
+
+------------------------------------------------------------
+Step 6 — Generate Reports & Dashboards
+------------------------------------------------------------
+1. Export discovery reports
+2. Create dashboards for executives and IT security
+3. Use findings to implement access or block policies
+
+📸 Screenshot: /screenshots/06-reports-dashboards.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

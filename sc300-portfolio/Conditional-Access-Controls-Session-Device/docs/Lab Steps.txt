@@ -1,0 +1,65 @@
+============================================================
+SC-300 — Conditional Access Controls: Session & Device
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Create Conditional Access Policy
+------------------------------------------------------------
+1. Navigate to Entra Admin Center
+2. Go to Conditional Access → Policies
+3. Create a new policy
+4. Name the policy:
+   "CA - Device & Session Controls"
+
+📸 Screenshot: /screenshots/01-create-policy.png
+
+------------------------------------------------------------
+Step 2 — Assign Users and Cloud Apps
+------------------------------------------------------------
+1. Assign test users or groups
+2. Select cloud apps (e.g., Office 365, Enterprise App)
+
+📸 Screenshot: /screenshots/02-assign-users-apps.png
+
+------------------------------------------------------------
+Step 3 — Configure Device-Based Controls
+------------------------------------------------------------
+1. Under Conditions → Device platforms
+2. Include all platforms
+3. Under Grant → Require device to be marked as compliant
+
+📸 Screenshot: /screenshots/03-device-compliance.png
+
+------------------------------------------------------------
+Step 4 — Configure Session Controls
+------------------------------------------------------------
+1. Go to Session controls
+2. Enable:
+   - Use app enforced restrictions OR
+   - Sign-in frequency
+   - Persistent browser session control
+
+📸 Screenshot: /screenshots/04-session-controls.png
+
+------------------------------------------------------------
+Step 5 — Test Access Scenarios
+------------------------------------------------------------
+1. Sign in from compliant device
+2. Sign in from non-compliant device
+3. Observe access behavior
+
+📸 Screenshot: /screenshots/05-test-access.png
+
+------------------------------------------------------------
+Step 6 — Review Sign-In Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Sign-in logs
+2. Filter by Conditional Access
+3. Validate applied controls
+
+📸 Screenshot: /screenshots/06-signin-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

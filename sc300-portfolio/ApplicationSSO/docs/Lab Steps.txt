@@ -1,0 +1,59 @@
+============================================================
+SC-300 — Application Single Sign-On (SSO)
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Add Enterprise Application
+------------------------------------------------------------
+1. Navigate to Microsoft Entra Admin Center
+2. Go to Applications → Enterprise Applications
+3. Click "New application"
+4. Select a gallery app (e.g., Salesforce, ServiceNow) or create a non-gallery app
+5. Create the application
+
+📸 Screenshot: /screenshots/01-add-app.png
+
+------------------------------------------------------------
+Step 2 — Configure SSO
+------------------------------------------------------------
+1. Open the enterprise application
+2. Select "Single sign-on"
+3. Choose authentication method:
+   - SAML
+   - OpenID Connect
+4. Configure required endpoints and identifiers
+5. Save configuration
+
+📸 Screenshot: /screenshots/02-configure-sso.png
+
+------------------------------------------------------------
+Step 3 — Assign Users or Groups
+------------------------------------------------------------
+1. Navigate to "Users and groups"
+2. Assign test users or security groups
+3. Confirm assignment
+
+📸 Screenshot: /screenshots/03-assign-users.png
+
+------------------------------------------------------------
+Step 4 — Test SSO Authentication
+------------------------------------------------------------
+1. Launch application from My Apps portal
+2. Authenticate using Entra ID credentials
+3. Verify successful sign-in
+
+📸 Screenshot: /screenshots/04-test-sso.png
+
+------------------------------------------------------------
+Step 5 — Review Sign-In Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Sign-in logs
+2. Filter by application name
+3. Review authentication details and claims
+
+📸 Screenshot: /screenshots/05-signin-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

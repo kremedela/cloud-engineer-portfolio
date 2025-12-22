@@ -1,0 +1,112 @@
+# Approval Workflows
+
+## 📌 Prerequisites
+- Power Automate access
+- Dataverse or SharePoint site available
+- Basic familiarity with flows
+
+---
+
+## ✅ Step 1 — Prepare a Data Source for Requests
+
+Choose one:
+- **Dataverse table:** "ApprovalRequests"
+- **SharePoint List:** "ApprovalRequests"
+
+Recommended columns:
+- Title (text)
+- Requester (text)
+- Status (choice)
+- Approver (text)
+- DecisionDate (date/time)
+- Comments (multiline)
+
+📸 Screenshot: Data source with columns
+
+---
+
+## ✅ Step 2 — Create a New Automated Approval Flow
+
+1. Go to: https://make.powerautomate.com  
+2. Select **Create → Automated cloud flow**
+3. Name: **Request Approval Flow**
+4. Trigger:  
+   - **When an item is created** (SharePoint)  
+   OR  
+   - **When a row is added** (Dataverse)
+
+📸 Screenshot: Flow creation screen
+
+---
+
+## ✅ Step 3 — Add "Start and Wait for an Approval"
+
+1. Click **+ New step**
+2. Search: **Approval**
+3. Select **Start and wait for an approval**
+4. Choose approval type:
+   - **Approve/Reject — First to respond**
+5. Set:
+   - Title: `Approval request for @{triggerBody()?['Title']}`
+   - Assigned to: Email of approver
+   - Details: Include any request metadata
+
+📸 Screenshot: Approval configuration panel
+
+---
+
+## ✅ Step 4 — Add Conditional Logic for Decision Handling
+
+1. Add **Condition** control
+2. Condition:
+equals(body('Start_and_wait_for_an_approval')?['outcome'], 'Approve')
+
+yaml
+Copy code
+
+### If Approved:
+- Update item/row → Status = Approved
+- Send email to requester confirming approval
+
+### If Rejected:
+- Update item/row → Status = Rejected
+- Send rejection email with comments
+
+📸 Screenshot: Flow with approval branching
+
+---
+
+## ✅ Step 5 — Log Outcome in Data Source
+
+For approved or rejected paths:
+
+- Update Dataverse row  
+OR  
+- Update SharePoint List item
+
+Fields to update:
+- Status
+- DecisionDate = `utcNow()`
+- Comments = Outcome comments
+
+📸 Screenshot: Update item action
+
+---
+
+## ✅ Step 6 — Test the Workflow
+
+1. Create a new item in your data source
+2. Wait for approval email notification
+3. Approve or reject
+4. Confirm:
+- Flow succeeded
+- Status changed
+- Notifications were sent
+- Decision stored correctly
+
+📸 Screenshot: Successful run history showing Approve/Reject path
+
+---
+
+## 🎉 End of Lab 8
+You now have a fully automated approval workflow.

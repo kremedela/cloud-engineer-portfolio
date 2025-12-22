@@ -1,0 +1,58 @@
+# Custom Connector Creation
+
+---
+
+## ✅ Step 1 — Select API to Use
+We will use a public test API:
+https://jsonplaceholder.typicode.com
+
+Test endpoint:
+https://jsonplaceholder.typicode.com/posts
+
+---
+
+## ✅ Step 2 — Create a New Custom Connector
+1. Go to **Power Automate**  
+2. Left menu → **More** → **Custom Connectors**  
+3. Select **+ New Custom Connector** → **Create from blank**  
+4. Name it: **JSONPlaceholderConnector**
+
+---
+
+## ✅ Step 3 — Configure General Information
+Fill in:
+
+| Field | Value |
+|-------|--------|
+| Description | JSON Placeholder API Connector |
+| Host | `jsonplaceholder.typicode.com` |
+| Base URL | `/` |
+| Scheme | HTTPS |
+
+Click **Next**.
+
+---
+
+## ✅ Step 4 — Security Settings
+Since JSONPlaceholder is public:
+
+- Choose **No Authentication**
+
+Click **Next**.
+
+---
+
+## ✅ Step 5 — Define an Action
+1. Go to the **Definition** tab  
+2. Under **Actions**, click **New Action**
+
+**General**
+- Summary: `Get all posts`
+- Description: `Retrieve list of posts`
+- Operation ID: `GetPosts`
+
+**Request**
+1. Select **Import from sample**
+2. Choose:
+   - Verb: `GET`
+   - URL:

@@ -1,0 +1,46 @@
+Lab Steps
+
+Step 1 — Identify Users to Disable or Revoke Sessions
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Users → All users.
+
+Identify one or more test users whose accounts you will disable or revoke sessions.
+
+📸 Screenshot #1: User list page (/screenshots/01-user-list.png)
+
+Step 2 — Disable User Accounts in the Portal
+
+Select a user.
+
+Click Block sign-in → Yes to disable the account.
+
+Confirm changes are saved.
+
+📸 Screenshot #2: Disable user account (/screenshots/02-disable-user.png)
+
+Step 3 — Revoke Active Sessions for Selected Users
+
+With the user selected, go to Authentication methods → Revoke sessions.
+
+Confirm the action to terminate all active sessions.
+
+📸 Screenshot #3: Revoke active sessions (/screenshots/03-revoke-sessions.png)
+
+Step 4 — Monitor Session Revocation and Account Status
+
+Navigate to Microsoft Entra → Users → Sign-ins.
+
+Filter by the disabled user to confirm no new sign-ins are occurring.
+
+📸 Screenshot #4: Sign-in logs for disabled user (/screenshots/04-signin-logs.png)
+
+Step 5 — Test Login Attempts with Disabled Accounts
+
+Attempt to sign in with the disabled account credentials at https://portal.azure.com
+ or Microsoft 365.
+
+Verify login fails and account is blocked.
+
+📸 Screenshot #5: Failed login attempt (/screenshots/05-failed-login.png)

@@ -1,0 +1,70 @@
+Lab Steps
+
+Step 1 — Verify Hybrid Identity Sync
+
+Log into Azure Portal.
+
+Navigate to Microsoft Entra → Identity → Hybrid management → Azure AD Connect.
+
+Confirm Cloud Sync or Azure AD Connect is properly syncing users.
+
+Ensure the test user is synchronized.
+
+📸 Screenshot #1: Hybrid sync status (/screenshots/01-hybrid-sync-status.png)
+
+Step 2 — Enable Microsoft Entra Kerberos
+
+Navigate to Microsoft Entra → Identity → Hybrid management → Microsoft Entra Kerberos.
+
+Select Enable Microsoft Entra Kerberos.
+
+Confirm creation of the Kerberos Server object in Entra.
+
+📸 Screenshot #2: Enable Entra Kerberos setting (/screenshots/02-enable-kerberos.png)
+
+Step 3 — Configure On-Prem AD for Entra Kerberos Cloud Trust
+
+On your domain controller, open PowerShell as Administrator.
+
+Verify the Kerberos server object was created in AD under:
+CN=Microsoft Entra ID,CN=Services,CN=Configuration,DC=domain,DC=com
+
+Run the following command to verify the object exists:
+Get-ADObject -Filter 'Name -like "CN=Cloud Kerberos"' -SearchBase "CN=Services,CN=Configuration,DC=domain,DC=com"
+
+📸 Screenshot #3: Kerberos AD object in Active Directory Users & Computers (/screenshots/03-kerberos-object.png)
+
+Step 4 — Validate Kerberos Server Metadata
+
+Still on the domain controller, validate the presence of the following:
+
+msDS-KeyVersionNumber
+
+msDS-SupportedEncryptionTypes
+
+ServiceAccountKeyFile
+
+📸 Screenshot #4: Kerberos server object attributes (/screenshots/04-kerberos-attributes.png)
+
+Step 5 — Test Passwordless Sign-In (Windows Hello for Business Recommended)
+
+Log in to a domain-joined Windows 10/11 device using your test hybrid user.
+
+Register Windows Hello for Business if not already done.
+
+Sign out and sign back in using PIN or biometric only.
+
+Verify the login is successful without a password.
+
+📸 Screenshot #5: WHfB login screen (/screenshots/05-passwordless-login.png)
+
+Step 6 — Validate Cloud Kerberos Trust in Sign-In Logs
+
+Go to Microsoft Entra → Monitoring → Sign-in logs.
+
+Find the test user login.
+
+Under Authentication Details, confirm it shows:
+Primary Authentication Method: Windows Hello for Business (Cloud Kerberos Trust)
+
+📸 Screenshot #6: Kerberos cloud trust in sign-in logs (/screenshots/06-kerberos-signin-log.png)

@@ -1,0 +1,49 @@
+============================================================
+SC-300 — Bulk Update of User Attributes
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Prepare CSV Input File
+------------------------------------------------------------
+1. Create a CSV file with the following headers:
+   UserPrincipalName,Department,JobTitle,UsageLocation
+2. Populate with test users and desired values
+
+📸 Screenshot: /screenshots/01-csv-file.png
+
+------------------------------------------------------------
+Step 2 — Connect to Microsoft Graph
+------------------------------------------------------------
+1. Open PowerShell as Administrator
+2. Connect to Microsoft Graph with required scopes
+
+📸 Screenshot: /screenshots/02-connect-graph.png
+
+------------------------------------------------------------
+Step 3 — Execute Bulk Update Script
+------------------------------------------------------------
+1. Run the bulk update script
+2. Monitor script output for successful updates
+
+📸 Screenshot: /screenshots/03-script-run.png
+
+------------------------------------------------------------
+Step 4 — Validate User Attribute Changes
+------------------------------------------------------------
+1. Open Entra Admin Center
+2. Review updated user profiles
+
+📸 Screenshot: /screenshots/04-user-after.png
+
+------------------------------------------------------------
+Step 5 — Review Audit Logs
+------------------------------------------------------------
+1. Navigate to Audit Logs
+2. Confirm attribute updates are recorded
+
+📸 Screenshot: /screenshots/05-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

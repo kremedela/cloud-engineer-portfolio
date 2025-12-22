@@ -1,0 +1,60 @@
+============================================================
+SC-300 — Automate Group Membership
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Review User Attributes
+------------------------------------------------------------
+1. Navigate to Microsoft Entra Admin Center
+2. Go to Users → Select a test user
+3. Review attributes such as:
+   - department
+   - jobTitle
+   - country
+
+📸 Screenshot: /screenshots/01-user-attributes.png
+
+------------------------------------------------------------
+Step 2 — Create Dynamic Group
+------------------------------------------------------------
+1. Navigate to Groups → New group
+2. Group type: Security
+3. Membership type: Dynamic User
+4. Name the group appropriately
+
+📸 Screenshot: /screenshots/02-create-dynamic-group.png
+
+------------------------------------------------------------
+Step 3 — Configure Membership Rule
+------------------------------------------------------------
+Example rule:
+(user.department -eq "IT")
+
+1. Open dynamic membership rules
+2. Add rule using desired attributes
+3. Validate syntax and save
+
+📸 Screenshot: /screenshots/03-dynamic-rule.png
+
+------------------------------------------------------------
+Step 4 — Validate Group Membership
+------------------------------------------------------------
+1. Review group members
+2. Confirm users matching rule are added automatically
+3. Modify a user attribute and observe membership change
+
+📸 Screenshot: /screenshots/04-group-membership.png
+
+------------------------------------------------------------
+Step 5 — Monitor Membership Changes
+------------------------------------------------------------
+1. Navigate to Entra ID → Audit logs
+2. Filter for group membership changes
+3. Review automated assignment events
+
+📸 Screenshot: /screenshots/05-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

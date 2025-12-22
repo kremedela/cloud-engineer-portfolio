@@ -1,0 +1,96 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Current Enterprise Applications
+Log into the Azure Portal.
+Navigate to Microsoft Entra → Enterprise Applications.
+Sort by:
+
+Application type
+
+Single sign-on mode
+
+“Non-gallery” status
+Identify:
+
+Unmanaged apps
+
+Rarely used apps
+
+High-risk third-party apps
+Document your findings in /docs.
+📸(/screenshots/01-app-inventory.png)
+
+Step 2 — Identify Unauthorized or Unmanaged Cloud Apps
+In the Enterprise Applications blade:
+Open several unmanaged apps and check:
+
+Publisher verification
+
+Permissions requested
+
+Consent status
+Highlight risky apps (e.g., unknown SSO apps, trial SaaS apps).
+📸(/screenshots/02-unmanaged-app.png)
+
+Step 3 — Navigate to Tenant Restrictions Configuration
+Go to Microsoft Entra → Identity → Protection → Tenant Restrictions.
+Click Configure Tenant Restrictions v2.
+Review the feature overview:
+
+Allowed apps
+
+Blocked apps
+
+App discovery logs
+📸(/screenshots/03-trv2.png)
+
+Step 4 — Create an Allowed Applications Policy
+Under Allowed Apps section:
+Click Add.
+Add apps such as:
+
+Microsoft 365 Apps
+
+Salesforce (official)
+
+ServiceNow
+
+GitHub Enterprise
+Assign Allowed: True.
+Save changes.
+📸(/screenshots/04-allowed-apps.png)
+
+Step 5 — Create a Deny/Default Block Policy
+Navigate to the Blocked Apps section.
+Set policy behavior:
+Block all apps except ones explicitly allowed.
+Add known risky apps from your audit:
+
+Unverified OAuth apps
+
+Consumer versions of enterprise apps (e.g., Dropbox Personal)
+Save the policy.
+📸(/screenshots/05-blocked-apps.png)
+
+Step 6 — Apply Conditional Access Enforcement
+Navigate to Microsoft Entra → Conditional Access.
+Create a new policy:
+Name: "CA – Enforce Tenant Restrictions"
+Assignments → Users: Select test user(s).
+Cloud apps → All cloud apps.
+Access controls → Grant → Require app to be approved.
+Enable policy.
+📸(/screenshots/06-ca-policy.png)
+
+Step 7 — Validate Using a Test User (End-User Perspective)
+Open a private/incognito session.
+Log in as the test user.
+Attempt to access:
+
+An allowed app (should succeed)
+
+A blocked app (should fail immediately)
+Observe:
+“Access blocked: This app is not allowed by your organization.”
+📸(/screenshots/07-allowed-success.png)
+📸(/screenshots/08-blocked-denied.png)

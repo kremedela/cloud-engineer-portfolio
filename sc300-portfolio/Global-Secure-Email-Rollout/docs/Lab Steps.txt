@@ -1,0 +1,43 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Verify Domains in Microsoft 365
+Log into Microsoft 365 Admin Center.
+Navigate to Setup → Domains.
+Check that all corporate domains are verified.
+For unverified domains, add TXT or MX records at your DNS provider.
+📸 (/screenshots/01-domain-verification.png)
+
+Step 2 — Configure Default Domain for Email Routing
+Go to Microsoft 365 Admin Center → Setup → Domains → Select primary domain.
+Set as default for new users and groups.
+Verify the MX and SPF records are correct.
+📸(/screenshots/02-default-domain.png)
+
+Step 3 — Enable Security Defaults and MFA
+Navigate to Microsoft Entra → Properties → Manage Security defaults.
+Enable Security Defaults.
+Check that all users are required to register for MFA.
+📸(/screenshots/03-security-defaults.png)
+
+Step 4 — Configure Exchange Online Mail Flow Policies
+Log into Exchange Admin Center → Mail flow → Rules.
+Create rules for:
+
+Anti-phishing protection- https://learn.microsoft.com/en-us/defender-office-365/anti-phishing-policies-about#spoof-protection-and-sender-dmarc-policies
+
+Safe attachments and links- https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-policies-configure
+
+Enforcing DKIM and SPF- https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure
+📸(/screenshots/04-mail-flow.png)
+
+Step 5 — Test Email Sending and Receiving Across Domains
+Create a test mailbox in each domain.
+Send emails between domains.
+Verify emails are received securely and not flagged as spam.
+📸(/screenshots/05-email-test.png)
+
+Step 6 — Monitor Security and Compliance Alerts
+Navigate to Microsoft 365 Security & Compliance Center → Alerts.
+Check for blocked emails, phishing attempts, or policy violations.
+Document findings in /docs.
+📸(/screenshots/06-security-alerts.png)

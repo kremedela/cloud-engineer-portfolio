@@ -1,0 +1,48 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+(Placed in /docs/LabSteps.txt)
+
+Step 1 — Prepare a CSV File of Guest Users
+Create a CSV file named guests.csv with a single column called email.
+Add the external users you wish to invite. For example:
+
+email
+partneruser1@example.com
+vendor123@partner.net
+consultant.test@external.org
+
+
+Save it in the /scripts folder.
+📸 Screenshot #1: CSV file open showing guest emails (/screenshots/01-csv-file.png)
+
+Step 2 — Bulk Invite Users via Microsoft Entra Portal
+Log into Azure Portal.
+Go to Microsoft Entra → Users → Bulk operations → Bulk invite.
+Upload the guests.csv file.
+Click Submit and wait for processing.
+Download the results file.
+
+📸 Screenshot #2: Bulk invite upload screen (/screenshots/02-bulk-upload.png)
+📸 Screenshot #3: Bulk results file downloaded (/screenshots/03-results-file.png)
+
+Step 3 — Validate Newly Created Guest Users
+Navigate to Microsoft Entra → Users → All users → Guest users.
+Search for the invited emails.
+Confirm:
+
+UserType = Guest
+
+InvitationStatus = PendingAcceptance or Accepted
+
+Source = External
+
+Document findings in /docs.
+
+📸 Screenshot #4: Guest users list showing imported users (/screenshots/04-guest-list.png)
+
+Step 4 — Validate Email Invitations Were Received
+Log into one of the guest inboxes.
+Look for a Microsoft invitation email.
+Verify that the “Get Started” or “Accept Invitation” link works.
+
+📸 Screenshot #5: Invitation email in mailbox (/screenshots/05-invitation-email.png)

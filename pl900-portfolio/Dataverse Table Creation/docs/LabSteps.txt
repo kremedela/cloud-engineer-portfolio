@@ -1,0 +1,84 @@
+# 🧪 Dataverse Table Creation (Step-by-Step)
+
+## Step 1 — Open Power Apps Maker Portal
+1. Go to: https://make.powerapps.com  
+2. Ensure you're in the correct environment.
+
+📸 *Screenshot: Maker Portal homepage*
+
+---
+
+## Step 2 — Create a New Dataverse Table
+1. Select **Tables** (left sidebar).  
+2. Click **+ New table**.  
+3. Enter:  
+   - Display name: *Project Tasks*  
+   - Description: *Stores task information for projects*  
+   - Primary column: *Task Name*  
+
+4. Click **Create**.
+
+📸 *Screenshot: Create table dialog*
+
+---
+
+## Step 3 — Add Custom Columns
+1. Open the new table.  
+2. Select **Columns → + Add column**.  
+3. Add the following example columns:
+
+| Column Name      | Data Type     | Required |
+|------------------|---------------|----------|
+| Due Date         | Date Only     | No       |
+| Priority         | Choice        | No       |
+| Assigned To      | Lookup (Users)| No       |
+| Status           | Choice        | No       |
+| Estimated Hours  | Number        | No       |
+
+4. Save each column.
+
+📸 *Screenshot: Add column screen*
+
+---
+
+## Step 4 — Create Table Relationships
+1. Go to **Relationships → + Add relationship**.  
+2. Choose relationship type:  
+   - **Many-to-one** (e.g., Project → Tasks)  
+3. Select related table (e.g., *Projects* table).  
+4. Create the relationship.
+
+📸 *Screenshot: Relationship creation window*
+
+---
+
+## Step 5 — Add Sample Data
+1. Go to the table → click **Data**.  
+2. Add example rows manually:  
+   - Task: "Initial Planning"  
+   - Priority: High  
+   - Status: In Progress  
+
+📸 *Screenshot: Data editor with rows*
+
+---
+
+## Step 6 — Optional: Use Table in a Canvas App
+1. Click **Apps → + Create → Canvas app**.  
+2. Insert a **Gallery**.  
+3. Set **Items = 'Project Tasks'**.  
+
+📸 *Screenshot: Canvas app showing Dataverse data*
+
+---
+
+## Step 7 — Validate Table Structure
+1. Ensure all fields, relationships, and rows appear correctly.  
+2. Confirm the table is discoverable in apps and Power Automate.
+
+📸 *Screenshot: Table overview screen*
+
+---
+
+## ✔ End of Lab
+You now have a fully configured Dataverse table suitable for apps, workflows, and reporting.

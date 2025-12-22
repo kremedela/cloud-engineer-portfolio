@@ -1,0 +1,35 @@
+Step 1 — Prepare Environment
+- Install Python 3.8+ if not already installed
+- Install required packages: pandas, matplotlib, reportlab
+  Run: pip install pandas matplotlib reportlab
+- Ensure folders exist: data/, charts/, reports/, screenshots/
+
+Step 2 — Prepare Sample CSV(s)
+- Place one or more CSV files in the data/ folder
+- Example CSV columns: Date, Sales, Region
+📸 Screenshot #1: CSV files in data/ folder (save in screenshots/01-csv.png)
+
+Step 3 — Run Automation Script
+- Open PowerShell and navigate to scripts/ folder
+  cd "...\Automated-Report-Generator\scripts"
+- Run script:
+  python generate_report.py
+📸 Screenshot #2: Running script in PowerShell (save in screenshots/02-run-script.png)
+
+Step 4 — Review Summary Statistics
+- Check console output for summary statistics of each CSV
+📸 Screenshot #3: Summary statistics printed in console (save in screenshots/03-summary.png)
+
+Step 5 — Verify Generated Charts
+- Charts for all numeric columns are saved in charts/ folder
+📸 Screenshot #4: Generated chart(s) (save in screenshots/04-charts.png)
+
+Step 6 — Verify Generated PDF Report
+- PDF reports are saved in reports/ folder
+- Open PDF to confirm summary statistics and charts are included
+📸 Screenshot #5: Generated PDF report (save in screenshots/05-pdf.png)
+
+Step 7 — Optional: Run with Multiple CSVs
+- Add additional CSV files to data/ folder
+- Re-run script to generate multiple reports automatically
+📸 Screenshot #6: Multiple CSVs processed (save in screenshots/06-multiple.png)

@@ -1,0 +1,113 @@
+# ALM with GitHub Actions
+
+---
+
+## ✅ Step 1 — Prepare GitHub Repository
+1. Create a new repository:
+   - Name: `powerplatform-alm`
+   - Private: Yes
+2. Add folders:
+/src
+/pipelines
+/solutions
+
+yaml
+Copy code
+
+---
+
+## ✅ Step 2 — Create Azure AD App Registration
+1. Go to Azure Portal → **Azure AD → App Registrations**
+2. Create app:
+- Name: **PP-ALM-SPN**
+- Accounts: Single tenant
+3. Generate:
+- **Client ID**
+- **Client Secret**
+4. Add API permissions:
+- Power Platform Service (Delegate + Application)
+5. Assign to Power Platform roles:
+- **Environment Maker**
+- **System Administrator (Dev/Test/Prod)**
+
+---
+
+## ✅ Step 3 — Add GitHub Secrets
+In the GitHub repo:
+- `CLIENT_ID`
+- `CLIENT_SECRET`
+- `TENANT_ID`
+- `DEV_ENV_URL`
+- `TEST_ENV_URL`
+- `PROD_ENV_URL`
+- `SOLUTION_NAME`
+
+---
+
+## ✅ Step 4 — Install Power Platform CLI (Optional)
+Local testing:
+pac install latest
+pac auth create --url <env-url> --tenant <tenant-id>
+
+yaml
+Copy code
+
+---
+
+## ✅ Step 5 — Add ALM Folder Structure
+Inside `/solutions`:
+- Create folder:  
+/solutions/<solution-name>/
+
+yaml
+Copy code
+
+---
+
+## ✅ Step 6 — Create Export Workflow (Dev → GitHub)
+Add file:
+.github/workflows/export-solution.yml
+
+yaml
+Copy code
+
+Workflow exports unmanaged solution and commits unpacked files to GitHub.
+
+---
+
+## ✅ Step 7 — Create Deployment Workflow (GitHub → Test/Prod)
+Add file:
+.github/workflows/deploy-solution.yml
+
+yaml
+Copy code
+
+Workflow packs solution and imports into TEST and PROD.
+
+---
+
+## ✅ Step 8 — Run Initial Export
+1. Push a commit to `main`
+2. GitHub Action automatically:
+   - Authenticates with PAC CLI  
+   - Exports solution from Dev  
+   - Unpacks solution  
+   - Commits the changes  
+
+---
+
+## ✅ Step 9 — Test Deployment Pipeline
+To publish new changes:
+
+1. Modify solution in Dev  
+2. Push trigger file `deploy.yml` with:
+   - New version  
+3. GitHub Action:
+   - Packs solution  
+   - Imports to Test (managed)
+   - Imports to Prod (managed)
+
+---
+
+## 🎉 Completion
+You now have a fully automated end-to-end ALM pipeline for Power Platform using GitHub Actions.

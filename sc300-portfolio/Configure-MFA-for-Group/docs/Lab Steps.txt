@@ -1,0 +1,51 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Sign in to Azure Portal
+
+Navigate to https://portal.azure.com
+
+Sign in with your Global Administrator account
+📸 Screenshot #1: Azure Portal dashboard after login (/screenshots/01-portal-login.png)
+
+Step 2 — Create a Dynamic Security Group
+
+Go to Azure Active Directory → Groups → New group
+
+Set Group type to Security
+
+Name the group (e.g., Finance-MFA)
+
+Set Membership type to Dynamic User
+
+Click Add dynamic query:
+
+Property: department
+
+Operator: Equals
+
+Value: Finance
+
+Click Add query, then Create
+📸 Screenshot #2: Dynamic group creation (/screenshots/02-group-creation.png)
+
+Step 3 — Configure Conditional Access Policy
+
+Navigate to Azure AD → Security → Conditional Access → New Policy
+
+Name the policy (e.g., Finance-MFA Policy)
+
+Under Assignments → Users and groups, select the dynamic group
+
+Under Cloud apps or actions, select All cloud apps
+
+Under Access controls → Grant, select Require multi-factor authentication
+
+Enable policy and click Create
+📸 Screenshot #3: Conditional Access policy (/screenshots/03-conditional-access.png)
+
+Step 4 — Test MFA
+
+Log in as a user in the dynamic group
+
+Complete MFA registration and verify sign-in
+📸 Screenshot #4: MFA prompt (/screenshots/04-mfa-prompt.png)

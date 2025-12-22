@@ -1,0 +1,79 @@
+Lab Steps
+
+Step 1 — Plan Authentication Methods
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Authentication methods → Policies.
+
+Review available authentication methods: certificate-based, temporary access pass, OAuth tokens, Microsoft Authenticator, and FIDO2.
+
+Decide which methods will be enabled for your tenant and for which users/groups.
+
+📸(/screenshots/01-auth-methods-overview.png)
+
+Step 2 — Enable Certificate-Based Authentication
+
+Go to Microsoft Entra → Authentication methods → Certificate-based authentication.
+
+Enable the method for users or groups.
+
+Configure required certificate settings and expiration policies.
+
+📸(/screenshots/02-certificate-auth.png)
+
+Step 3 — Enable Temporary Access Pass (TAP)
+
+Navigate to Microsoft Entra → Authentication methods → Temporary Access Pass.
+
+Enable TAP for selected users.
+
+Configure expiration duration, one-time use, and eligible groups.
+
+📸(/screenshots/03-tap-settings.png)
+
+Step 4 — Configure Microsoft Authenticator
+
+Navigate to Microsoft Entra → Authentication methods → Microsoft Authenticator.
+
+Enable registration for all users or selected groups.
+
+Optionally enforce number matching or push notifications for MFA.
+
+📸(/screenshots/04-authenticator-settings.png)
+
+Step 5 — Configure Passkey (FIDO2)
+
+Go to Microsoft Entra → Authentication methods → FIDO2 Security Keys.
+
+Enable FIDO2 authentication.
+
+Configure registration for users and set key restrictions if needed.
+
+📸(/screenshots/05-fido2-settings.png)
+
+Step 6 — Configure OAuth Tokens
+
+Navigate to Microsoft Entra → App registrations → [Select App] → Authentication.
+
+Configure supported account types, redirect URIs, and token lifetimes.
+
+📸(/screenshots/06-oauth-settings.png)
+
+Step 7 — Test Authentication Methods
+
+Log in as a test user.
+
+Attempt sign-in using each configured authentication method.
+
+Ensure all methods work correctly.
+
+📸(/screenshots/07-test-signin.png)
+
+Step 8 — Verify Configuration
+
+Return to Microsoft Entra → Authentication methods → Policies.
+
+Confirm all changes are saved and effective for selected users/groups.
+
+📸(/screenshots/08-auth-methods-confirm.png)

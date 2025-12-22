@@ -1,0 +1,45 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Default External Collaboration Settings
+
+Log into Azure Portal
+
+Navigate to Microsoft Entra → External Identities → External collaboration settings
+
+Review default settings for:
+
+Guest user permissions
+
+Collaboration restrictions
+
+Admin consent requirements
+📸 Screenshot #1: Default external collaboration settings (/screenshots/01-default-settings.png)
+
+Step 2 — Configure Guest User Permissions
+
+Enable or disable guest users' ability to:
+
+Invite other guests
+
+Access groups or Teams
+
+Consent to applications
+
+Click Save
+📸 Screenshot #2: Configured guest user permissions (/screenshots/02-guest-permissions.png)
+
+Step 3 — Configure Collaboration Restrictions
+
+Restrict invitations to specific domains (e.g., partnercompany.com)
+
+Enable or disable external user sharing in Microsoft 365 apps
+
+Review conditional access impact on guest users
+📸 Screenshot #3: Domain restriction and sharing policies (/screenshots/03-domain-restrictions.png)
+
+Step 4 — Test Access for Guest Users
+
+Use a guest account to attempt login and resource access
+
+Validate that access is correctly restricted or allowed
+📸 Screenshot #4: Guest user access verification (/screenshots/04-guest-access.png)

@@ -1,0 +1,115 @@
+# Power BI Row-Level Security (RLS)
+
+---
+
+## ✅ Step 1 — Import or Load Dataset
+1. Open **Power BI Desktop**
+2. Click **Get Data → Excel, SQL, or Dataverse**
+3. Load the dataset (example: EmployeeSales table)
+4. Verify the presence of fields such as:
+   - `UserEmail`
+   - `Department`
+   - `Region`
+   - `ManagerEmail`
+
+📸 **Screenshot:** Dataset fields in Power BI Model view
+
+---
+
+## ✅ Step 2 — Identify RLS Dimension Columns
+Typical columns suitable for RLS:
+- `UserEmail`
+- `Region`
+- `BusinessUnit`
+- `Department`
+
+📸 **Screenshot:** Highlight RLS column from the dataset
+
+---
+
+## ✅ Step 3 — Create RLS Roles in Power BI Desktop
+1. Go to **Modeling → Manage Roles**
+2. Click **Create**
+3. Example roles:
+   - **SalesManagers**
+   - **HR**
+   - **RegionalLeads**
+
+4. Define DAX filters such as:
+[UserEmail] = USERPRINCIPALNAME()
+
+nginx
+Copy code
+or
+[Region] = "East"
+
+yaml
+Copy code
+
+📸 **Screenshot:** Manage Roles dialog with DAX filter
+
+---
+
+## ✅ Step 4 — Add DAX Filters for Each Role
+Examples:
+
+### A. User-level security
+[UserEmail] = USERPRINCIPALNAME()
+
+shell
+Copy code
+
+### B. Region-level security
+[Region] = "West"
+
+shell
+Copy code
+
+### C. Dynamic department security
+[Department] IN {"HR", "Sales"}
+
+yaml
+Copy code
+
+📸 **Screenshot:** DAX editor with applied RLS filter
+
+---
+
+## ✅ Step 5 — Validate RLS in Power BI Desktop
+1. Go to **Modeling → View as Roles**
+2. Select a role (example: RegionalLeads)
+3. Validate filtered visuals
+
+📸 **Screenshot:** “View As” role preview showing filtered report
+
+---
+
+## ✅ Step 6 — Publish to Power BI Service
+1. Click **Publish**
+2. Select your workspace (Dev/Test)
+
+📸 **Screenshot:** Publish success confirmation
+
+---
+
+## ✅ Step 7 — Assign Users to RLS Roles in Power BI Service
+1. Power BI Service → Dataset → **Security**
+2. Select the RLS role
+3. Add Azure AD users/groups
+4. Save assignments
+
+📸 **Screenshot:** Dataset Security screen with users assigned
+
+---
+
+## ✅ Step 8 — Test RLS in Service
+1. Select **Test as role**
+2. Confirm filtered visual output
+3. Test as individual user identity
+
+📸 **Screenshot:** RLS test view in Power BI service
+
+---
+
+## 🎉 Completion
+Your report now enforces RLS for all users based on email, region, or department values.

@@ -1,0 +1,110 @@
+# Power Apps Triggered Flows
+
+## 📌 Prerequisites
+- Power Apps environment with Dataverse enabled (optional)
+- Power Automate maker permissions
+- A sample Canvas App
+
+---
+
+## ✅ Step 1 — Create a Power Apps Triggered Flow
+
+1. Go to https://make.powerautomate.com
+2. Click **Create**
+3. Choose **Instant cloud flow**
+4. Name it:  
+   **"PA Trigger — Send Notification"**
+5. Select the trigger:  
+   **"Power Apps (V2)"**
+6. Click **Create**
+
+📸 Screenshot: Create Instant Flow window
+
+---
+
+## ✅ Step 2 — Add Input Parameters
+
+1. Click the trigger → **Add an input**
+2. Select:
+   - **Text**
+3. Name the input:  
+   `UserMessage`
+
+📸 Screenshot: Trigger with Power Apps inputs
+
+---
+
+## ✅ Step 3 — Add Flow Logic
+
+Example:
+
+1. Add **Compose**  
+   - Input: `UserMessage`
+
+2. Add an action (choose one):
+   - **Send an Email (V2)**
+   - **Post a Teams message**
+   - **Create a Dataverse row**
+
+3. Example email configuration:
+   - To: *your email*
+   - Subject: `New request from Power Apps`
+   - Body: `The user submitted: @{triggerOutputs()?['body/UserMessage']}`
+
+📸 Screenshot: Flow actions added
+
+---
+
+## ✅ Step 4 — Return a Response to Power Apps
+
+1. Add action → **Respond to a PowerApp or flow**
+2. Click **Add output**
+3. Choose **Text**
+4. Name it:  
+   `ReturnStatus`
+5. Set value:  
+   `"Message sent successfully!"`
+
+📸 Screenshot: Response action with return values
+
+---
+
+## ✅ Step 5 — Save & Test the Flow
+
+1. Click **Save**
+2. → **Test**
+3. Choose “Manually”  
+4. Enter a test value
+5. Confirm success
+
+📸 Screenshot: Flow run history succeeded
+
+---
+
+## ✅ Step 6 — Connect Flow to a Power App
+
+1. Open your Canvas App  
+2. Insert → **Button**
+3. Select the button → OnSelect property
+4. Set formula:
+
+Set(
+status,
+'PA Trigger — Send Notification'.Run(TextInput1.Text)
+);
+
+css
+Copy code
+
+5. Add a **Label** to display:
+status
+
+yaml
+Copy code
+
+📸 Screenshot: Canvas App with button + label
+
+---
+
+## 🎉 End of Lab 10
+You now have a Power App button that triggers a cloud flow, sends data, performs logic, and returns results.

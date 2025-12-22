@@ -1,0 +1,65 @@
+============================================================
+SC-300 — Configure Conditional Access App Control
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Identify Cloud Apps
+------------------------------------------------------------
+1. Navigate to MDCA → Cloud apps
+2. Select apps to be monitored/protected
+3. Review app risk score and sensitivity
+
+📸 Screenshot: /screenshots/01-cloud-apps.png
+
+------------------------------------------------------------
+Step 2 — Create CAAC Policy
+------------------------------------------------------------
+1. Go to MDCA → Conditional Access App Control → Policies
+2. Click "Create Policy"
+3. Name: "SC-300 CAAC Policy"
+4. Select target apps
+
+📸 Screenshot: /screenshots/02-create-caac-policy.png
+
+------------------------------------------------------------
+Step 3 — Apply Policy via Conditional Access
+------------------------------------------------------------
+1. Navigate to Entra ID → Conditional Access → Policies
+2. Assign the CAAC policy to users or groups
+3. Enable "Use Conditional Access App Control"
+
+📸 Screenshot: /screenshots/03-apply-caac-policy.png
+
+------------------------------------------------------------
+Step 4 — Configure Session Controls
+------------------------------------------------------------
+1. Choose session control mode:
+   - Monitor only
+   - Block downloads
+   - Restrict access
+2. Save policy
+
+📸 Screenshot: /screenshots/04-session-controls.png
+
+------------------------------------------------------------
+Step 5 — Test Sign-Ins
+------------------------------------------------------------
+1. Sign in with targeted user accounts
+2. Validate that session controls apply
+3. Test internal and guest users
+
+📸 Screenshot: /screenshots/05-test-signin.png
+
+------------------------------------------------------------
+Step 6 — Review Audit & Enforcement Logs
+------------------------------------------------------------
+1. Navigate to MDCA → Activity log
+2. Filter by app and user
+3. Confirm policy enforcement and report any blocked actions
+
+📸 Screenshot: /screenshots/06-enforcement-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

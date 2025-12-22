@@ -1,0 +1,93 @@
+# Employee Onboarding Workflow  
+## 🧪 Lab Steps
+
+---
+
+## 🔹 Part 1 — Create Onboarding Data Source
+
+### Option A — SharePoint List (recommended)
+Columns:
+- EmployeeName (Text)
+- JobTitle (Text)
+- Department (Choice)
+- StartDate (Date)
+- Manager (Person)
+- EquipmentNeeded (Choice - Laptop, Phone, Badge, etc.)
+
+📸 Screenshot: SharePoint list with columns
+
+### Option B — Dataverse Table (optional)
+Use identical column structure.
+
+📸 Screenshot: Dataverse table created
+
+---
+
+## 🔹 Part 2 — Build the Power Automate Flow
+
+1. Go to **Power Automate** → **Create** → **Automated flow**.  
+2. Trigger:  
+   - SharePoint → *When an item is created*  
+     OR  
+   - Dataverse → *When a row is added*  
+3. Add a step → **Get Manager (V2)** using Employee or a manual field.  
+4. Add Compose actions to standardize data.
+
+📸 Screenshot: Flow trigger + basic steps
+
+---
+
+## 🔹 Part 3 — Add HR Approval Step
+
+1. Add **Start and Wait for an Approval**.  
+2. Approval Type: **Approve/Reject — First response**.  
+3. Include employee details in approval card.
+
+📸 Screenshot: Approval configuration
+
+---
+
+## 🔹 Part 4 — Create IT & Facilities Tasks
+
+### Option A — Planner Tasks  
+- Add action: **Create a task (Planner)**  
+- Assign to IT or Facilities group  
+- Provide details: equipment, start date, manager  
+
+### Option B — Microsoft To Do Tasks  
+- Create tasks for individual users
+
+📸 Screenshot: Planner task creation
+
+---
+
+## 🔹 Part 5 — Send Notifications
+
+### HR Notification
+- Email confirming approval/rejection
+
+### IT Notification
+- Email with provisioning checklist
+
+### New Employee Notification
+(optional)
+- Welcome message via email or Teams
+
+📸 Screenshot: Email notification step
+
+---
+
+## 🔹 Part 6 — Test Workflow End-to-End
+
+1. Add a new employee record in SharePoint/Dataverse.  
+2. Approve the onboarding request.  
+3. Confirm tasks appear in Planner/To Do.  
+4. Validate notification emails.  
+5. Check Teams messages (if added).  
+
+📸 Screenshot: Completed onboarding workflow run
+
+---
+
+## 🎉 Lab Complete  
+Your onboarding workflow now automates approvals, tasks, and communication across departments.

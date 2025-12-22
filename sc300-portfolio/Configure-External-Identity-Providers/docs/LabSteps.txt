@@ -1,0 +1,65 @@
+============================================================
+SC-300 — Configure External Identity Providers
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Configure External Identity Provider
+------------------------------------------------------------
+1. Navigate to Entra ID → External Identities → Identity providers
+2. Click "Add identity provider"
+3. Select SAML or OpenID Connect
+4. Enter IdP metadata or endpoints
+5. Configure required attributes/claims
+
+📸 Screenshot: /screenshots/01-add-idp.png
+
+------------------------------------------------------------
+Step 2 — Configure Claims Mapping
+------------------------------------------------------------
+1. Map IdP claims to Entra attributes (UPN, email, roles)
+2. Save mapping
+3. Validate transformation rules
+
+📸 Screenshot: /screenshots/02-claims-mapping.png
+
+------------------------------------------------------------
+Step 3 — Enable B2B/B2C Access
+------------------------------------------------------------
+1. Navigate to Users → External users
+2. Invite test external users
+3. Assign appropriate roles/groups
+4. Verify users appear in tenant
+
+📸 Screenshot: /screenshots/03-b2b-b2c-access.png
+
+------------------------------------------------------------
+Step 4 — Assign Enterprise App Access
+------------------------------------------------------------
+1. Navigate to Enterprise Applications → select app
+2. Assign external users or groups
+3. Validate SSO configuration for app
+
+📸 Screenshot: /screenshots/04-app-access.png
+
+------------------------------------------------------------
+Step 5 — Validate External User Authentication
+------------------------------------------------------------
+1. Sign in as external test user
+2. Confirm authentication via external IdP
+3. Verify claims and access permissions
+
+📸 Screenshot: /screenshots/05-authentication-test.png
+
+------------------------------------------------------------
+Step 6 — Review Audit & Sign-In Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Audit Logs / Sign-ins
+2. Filter by external user or app
+3. Confirm authentication events and policy enforcement
+
+📸 Screenshot: /screenshots/06-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

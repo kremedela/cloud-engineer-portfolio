@@ -1,0 +1,11 @@
+﻿Full Detailed Lab Instructions for: File-Governance-and-DLP
+
+----------------------------------------------
+Step 1 — Placeholder description
+(Add step-by-step lab instructions here.)
+----------------------------------------------
+Step 2 — Placeholder description
+----------------------------------------------
+Step 3 — Placeholder description
+----------------------------------------------
+(Add more sections as needed.)

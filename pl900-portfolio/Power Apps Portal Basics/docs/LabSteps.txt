@@ -1,0 +1,118 @@
+# Power Apps Portal Basics
+
+## 📌 Prerequisites
+- Access to a Power Platform Environment with Dataverse enabled
+- Power Pages Maker permissions
+- At least one Dataverse table created (e.g., "ContactRequests")
+
+---
+
+## ✅ Step 1 — Create a New Power Apps Portal (Power Pages Site)
+
+1. Go to: https://make.powerpages.microsoft.com
+2. Select **+ Create**
+3. Choose **Customer self-service portal** (or Blank site)
+4. Name the site:
+   **"MM Training Portal"**
+5. Choose the environment: **Dev Environment**
+6. Click **Done**
+
+📸 Screenshot: Power Pages site creation screen
+
+Portal provisioning will take 3–5 minutes.
+
+---
+
+## ✅ Step 2 — Open the Portal in the Design Studio
+
+1. When provisioning completes, click **Edit**
+2. The design studio opens showing:
+   - Pages
+   - Components
+   - Styling
+   - Data workspace
+
+📸 Screenshot: Power Pages design studio home
+
+---
+
+## ✅ Step 3 — Add a New Web Page
+
+1. In the left navigation → select **Pages**
+2. Choose **Add page**
+3. Select **Blank**
+4. Name it: **"Contact Us"**
+5. Set a friendly URL like: `/contact-us`
+
+📸 Screenshot: New page creation dialog
+
+---
+
+## ✅ Step 4 — Insert Components (Text, Forms, Buttons)
+
+On the new page:
+
+1. Click **Add Component**
+2. Add:
+   - Text block → "Welcome to the Contact Page"
+   - Button → “Submit Request”
+   - Divider
+   - Image (optional)
+
+📸 Screenshot: Page with text + button components
+
+---
+
+## ✅ Step 5 — Display Dataverse Data (Table List)
+
+1. Go to **Data → Tables**
+2. Select an existing Dataverse table:
+   - **ContactRequests**
+3. Click **Create list**
+4. Choose:
+   - Default view OR create a custom view
+5. Insert list onto your page
+
+📸 Screenshot: List component showing Dataverse entries
+
+---
+
+## ✅ Step 6 — Add a Form for Guest or Authenticated Users
+
+1. Click **Add component → Form**
+2. Select the **ContactRequests** table
+3. Choose **Basic form**
+4. Configure permissions:
+   - Web roles: Authenticated Users
+   - Table permissions: Create + Read
+
+📸 Screenshot: Portal form component added
+
+---
+
+## ✅ Step 7 — Configure Authentication (Optional)
+
+1. In left nav, select **Set up**
+2. Choose **Identity Providers**
+3. Turn on:
+   - **Azure AD**
+   - **Email + Password**
+4. Configure redirect URL:
+   `https://YOUR-SITE.powerappsportals.com/signin-oidc`
+
+📸 Screenshot: Authentication provider list
+
+---
+
+## ✅ Step 8 — Publish the Site
+
+1. Click **Publish**
+2. Wait 1–2 minutes
+3. Click **Browse website**
+
+📸 Screenshot: Live portal published successfully
+
+---
+
+## 🎉 End of Lab 9
+You now have a functioning Power Pages portal with pages, datastore integration, and optional authentication.

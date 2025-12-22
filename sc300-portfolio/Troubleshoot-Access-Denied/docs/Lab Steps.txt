@@ -1,0 +1,75 @@
+🧪 Lab Steps (Full Detailed Instructions — Plain Text)
+
+Step 1 — Identify the User Experiencing Access Denied
+Log into Azure Portal.
+Navigate to Microsoft Entra → Users → All users.
+Select the test user who reported “Access Denied.”
+Review:
+
+Assigned roles
+
+Group memberships
+
+Sign-in activity
+📸 Test user overview (/screenshots/01-test-user.png)
+
+Step 2 — Review Assigned Roles
+Go to Microsoft Entra → Users → Select user → Assigned roles.
+Check:
+
+Role name
+
+Scope (Tenant-wide, Administrative Unit)
+
+Assignment status
+📸(/screenshots/02-role-assignments.png)
+
+Step 3 — Evaluate Effective Permissions in Portal
+Navigate to Microsoft Entra → Roles → Choose role → Effective permissions → Select test user.
+Review:
+
+Permissions inherited from groups
+
+Direct role assignments
+
+Any conflicting roles or denied permissions
+📸(/screenshots/03-effective-permissions.png)
+
+Step 4 — Evaluate Permissions Using PowerShell
+Open PowerShell.
+Connect to Microsoft Graph:
+
+Run commands to list user role assignments
+
+Identify scope and inherited roles
+
+Export report for documentation
+📸(/screenshots/04-powershell-role-report.png)
+
+Step 5 — Check Conditional Access Policies
+Navigate to Microsoft Entra → Security → Conditional Access → Policies.
+Verify if any policy may block access:
+
+User assignment
+
+Device compliance requirements
+
+Location-based restrictions
+Document relevant policies in /docs.
+📸(/screenshots/05-ca-policies.png)
+
+Step 6 — Resolve Misconfigured Permissions
+If a role is missing or incorrectly scoped:
+
+Assign the correct role
+
+Remove conflicting roles
+
+Verify user membership in required groups
+📸(/screenshots/06-corrected-roles.png)
+
+Step 7 — Test User Access
+Log in as the test user.
+Attempt access to previously blocked resources.
+Confirm access is now granted.
+📸(/screenshots/07-access-granted.png)

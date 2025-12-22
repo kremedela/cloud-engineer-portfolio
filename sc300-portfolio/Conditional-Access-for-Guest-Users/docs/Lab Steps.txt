@@ -1,0 +1,64 @@
+============================================================
+SC-300 — Conditional Access for Guest Users
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Identify Guest Users
+------------------------------------------------------------
+1. Navigate to Entra Admin Center
+2. Go to Users → External Identities → Guest Users
+3. Review existing guest accounts and attributes
+
+📸 Screenshot: /screenshots/01-guest-users.png
+
+------------------------------------------------------------
+Step 2 — Create Conditional Access Policy
+------------------------------------------------------------
+1. Navigate to Conditional Access → Policies
+2. Create a new policy named:
+   "CA - Guest Users Enforcement"
+3. Under Assignments → Users, select "Guest or External Users"
+
+📸 Screenshot: /screenshots/02-create-policy.png
+
+------------------------------------------------------------
+Step 3 — Configure Access Requirements
+------------------------------------------------------------
+1. Under Grant → Require MFA
+2. Optionally, require compliant device or hybrid Azure AD joined device
+3. Save policy
+
+📸 Screenshot: /screenshots/03-access-requirements.png
+
+------------------------------------------------------------
+Step 4 — Configure Session Controls
+------------------------------------------------------------
+1. Enable session controls if desired:
+   - Sign-in frequency
+   - Persistent browser session
+2. Save changes
+
+📸 Screenshot: /screenshots/04-session-controls.png
+
+------------------------------------------------------------
+Step 5 — Test Guest Sign-Ins
+------------------------------------------------------------
+1. Sign in as a guest user from an external account
+2. Validate MFA or device compliance is enforced
+3. Test blocked or restricted scenarios
+
+📸 Screenshot: /screenshots/05-guest-signin.png
+
+------------------------------------------------------------
+Step 6 — Review Sign-In Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Sign-in logs
+2. Filter by guest users and Conditional Access
+3. Confirm policy was applied
+
+📸 Screenshot: /screenshots/06-signin-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

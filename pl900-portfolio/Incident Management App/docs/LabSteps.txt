@@ -1,0 +1,83 @@
+# Incident Management App  
+## 🧪 Lab Steps
+
+---
+
+## 🔹 Part 1 — Create Dataverse Tables
+
+### Create **Incidents** Table  
+Columns:  
+- Title (Text)  
+- Description (Multiline Text)  
+- Category (Lookup → Categories table)  
+- Status (Lookup → Statuses table)  
+- AssignedTo (User)  
+- Priority (Choice)  
+- Created Date (Auto)  
+- Last Updated (Auto)
+
+📸 Screenshot: New Dataverse table with columns
+
+### Create **Categories** Table  
+Columns:  
+- Name (Text)
+
+### Create **Statuses** Table  
+Columns:  
+- StatusName (Text)
+
+📸 Screenshot: Categories & Statuses tables in Dataverse
+
+---
+
+## 🔹 Part 2 — Build the Canvas App
+
+1. Open **Power Apps** → **Create** → **Canvas App**.  
+2. Connect to Dataverse → Select **Incidents**, **Categories**, **Statuses**.  
+3. Add a **Gallery** listing all incidents.  
+4. Add a **Form** to create/edit incidents.  
+5. Link Category & Status dropdowns to Dataverse tables.  
+6. Add navigation between **Home**, **Create Incident**, and **Details** screens.
+
+📸 Screenshot: Canvas App with gallery & form
+
+---
+
+## 🔹 Part 3 — Add Power Automate Flow (Notification)
+
+1. In Power Apps → **Add Flow** → Create new flow.  
+2. Trigger: **When a row is added** (Dataverse → Incidents).  
+3. Add step → **Send an email (V2)**.  
+4. Include incident Title, Priority, and Description in email body.  
+5. Save and return to app.
+
+📸 Screenshot: Flow with Dataverse trigger + email step
+
+---
+
+## 🔹 Part 4 — Integrate Flow into App
+
+1. In Canvas App → Add button **Submit Incident**.  
+2. Button OnSelect:  
+   - SubmitForm(IncidentForm)  
+   - Run flow after submission  
+3. Confirm card mappings.  
+
+📸 Screenshot: Button with OnSelect formula
+
+---
+
+## 🔹 Part 5 — Test the Application
+
+1. Create a new incident.  
+2. Confirm the record appears in the gallery.  
+3. Check that an email notification is received.  
+4. Update the incident status → verify auto-updates in Dataverse.  
+5. Test multiple entries and filtering.
+
+📸 Screenshot: Email notification received
+
+---
+
+## 🎉 Lab Complete  
+You now have a functional Incident Management App powered by Dataverse and automated workflows.

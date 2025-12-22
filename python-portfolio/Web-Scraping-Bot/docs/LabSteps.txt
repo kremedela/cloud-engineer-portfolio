@@ -1,0 +1,14 @@
+STEP 1 — Send HTTP Requests
+- Use requests.get(url)
+
+STEP 2 — Parse HTML
+- Use BeautifulSoup to extract elements
+
+STEP 3 — Extract Data
+- Create lists/dictionaries of relevant data
+
+STEP 4 — Clean Data
+- Remove unwanted characters, format data
+
+STEP 5 — Export CSV
+- Save data using pandas.DataFrame.to_csv()

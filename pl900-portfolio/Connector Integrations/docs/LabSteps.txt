@@ -1,0 +1,96 @@
+# Connector Integrations
+
+## 📌 Prerequisites
+- Working Power Apps environment
+- One Dataverse table created from earlier labs
+- Access to Power Automate
+- Appropriate connector licensing (if using premium)
+
+---
+
+## ✅ Step 1 — Create a New Connector Connection
+
+1. Go to:  
+   https://make.powerapps.com
+2. Select **Tables → Data → Connections**
+3. Click **+ New connection**
+4. Choose one of the following for this lab:
+   - **Office 365 Users**
+   - **Outlook**
+   - **Teams**
+   - **SharePoint**
+   - **HTTP Connector** (Premium)
+5. Sign in and authenticate
+
+📸 **Screenshot:** List of active connectors
+
+---
+
+## ✅ Step 2 — Test Connector Authentication
+
+1. Click the connector you created  
+2. Select **Test connection**  
+3. Confirm it shows **Connected**
+
+📸 Screenshot: Connector status screen
+
+---
+
+## ✅ Step 3 — Add Connector to a Canvas App
+
+1. Create a new **Canvas App**
+2. Go to **Data → Add data**
+3. Choose the connector you created  
+4. Example:  
+   - Select **Office 365 Users**
+5. Add a label and set the *Text* property to:
+6. Run the app — you should see your name displayed.
+
+📸 Screenshot: App showing user profile
+
+---
+
+## ✅ Step 4 — Add Connector to a Power Automate Flow
+
+1. Go to **Power Automate**
+2. Create **Automated cloud flow**
+3. Trigger:  
+**Manual trigger**
+4. Add action:  
+- Example: **Office 365 Users → Get user profile (V2)**  
+5. Add another action:
+- **Send an email (V2)**
+6. In the email body, insert values returned from the connector action.
+
+📸 Screenshot: Flow with connector actions in sequence
+
+---
+
+## ✅ Step 5 — Run and Test the Flow
+
+1. Click **Test**  
+2. Choose **Manual test**  
+3. Run the flow  
+4. Verify:
+- The profile was retrieved
+- The email was sent successfully
+
+📸 Screenshot: Successful flow run results page
+
+---
+
+## ✅ Step 6 — Use Multiple Connectors in One App or Flow (Optional)
+
+Examples:
+- Use **SharePoint + Office 365 Users**
+- Use **Dataverse + Outlook**
+- Use **Teams + Excel Online**
+
+This simulates real automation patterns.
+
+---
+
+## 🎉 End of Lab 7
+You now understand how to authenticate, configure, and use Power Platform connectors.
+
+

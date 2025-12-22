@@ -1,0 +1,48 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Built-In Microsoft Entra Roles
+Log in to the Azure Portal.
+Navigate to Microsoft Entra → Roles & administrators.
+Select common roles such as Global Administrator, User Administrator, and Application Administrator.
+Review “Description,” “Permissions,” and “Assignable scopes.”
+📸 (/screenshots/01-built-in-roles.png)
+
+Step 2 — Examine Role Permissions
+Select the User Administrator role.
+Click Permissions → Review the permissions list.
+Scroll through “Directory,” “Users,” and “Groups” permissions to see how many privileges this role includes.
+📸 (/screenshots/02-role-permissions.png)
+
+Step 3 — Assign a Built-In Role to a Test User
+Go to Microsoft Entra → Users.
+Create a new test user (if you didn’t create one in Lab 1).
+Return to Roles & administrators → search for “User Administrator.”
+Select the role → Add assignments → choose the test user → Assign.
+📸 (/screenshots/03-role-assignment.png)
+
+Step 4 — Create a Custom Role
+Navigate to Microsoft Entra → Roles & administrators → New custom role.
+Enter:
+
+Name: "Helpdesk Password Reset Role"
+
+Description: "Allows resetting passwords only"
+Choose Start from scratch.
+Add permissions → Search for: “microsoft.directory/users/password”
+Select “User password” permissions → Add → Review → Create.
+📸 (/screenshots/04-custom-role.png)
+
+Step 5 — Assign the Custom Role with Scope
+Go to your new custom role → Assignments → Add assignment.
+Choose your test user.
+Set Assignable scope: Directory → or restrict to an administrative unit (AU) if available.
+Assign the role.
+📸 (/screenshots/05-custom-role-assignment.png)
+
+Step 6 — Validate Effective Permissions
+Sign in with the test user in a separate browser session or InPrivate window.
+Navigate to Microsoft Entra → Users → Try resetting another user’s password.
+Attempt viewing other directory settings to confirm access is limited.
+For built-in roles: test user admin actions should be available.
+For custom role: only password reset should work.
+📸 (/screenshots/06-effective-permissions.png)

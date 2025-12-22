@@ -1,0 +1,52 @@
+============================================================
+SC-300 — Assign, Classify & Manage Users, Groups, and App Roles
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Review Enterprise Application
+------------------------------------------------------------
+1. Navigate to Microsoft Entra Admin Center
+2. Go to Applications → Enterprise Applications
+3. Select the target application
+4. Review existing SSO and access settings
+
+📸 Screenshot: /screenshots/01-app-overview.png
+
+------------------------------------------------------------
+Step 2 — Configure Application Roles
+------------------------------------------------------------
+1. Navigate to App registrations
+2. Select the app registration associated with the enterprise app
+3. Open "App roles"
+4. Create roles such as:
+   - Reader
+   - Contributor
+   - Admin
+5. Save configuration
+
+📸 Screenshot: /screenshots/02-app-roles.png
+
+------------------------------------------------------------
+Step 3 — Assign Users and Groups
+------------------------------------------------------------
+1. Return to Enterprise Application
+2. Open "Users and groups"
+3. Assign users or security groups
+4. Select appropriate app role during assignment
+
+📸 Screenshot: /screenshots/03-assign-users-groups.png
+
+------------------------------------------------------------
+Step 4 — Validate Role-Based Access
+------------------------------------------------------------
+1. Sign in as a test user
+2. Launch the application
+3. Verify access based on assigned role
+4. Confirm access restrictions for other roles
+
+📸 Screenshot: /screenshots/04-validate-access.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

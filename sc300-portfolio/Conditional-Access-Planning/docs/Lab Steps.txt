@@ -1,0 +1,85 @@
+Lab Steps
+Step 1 — Access Conditional Access Policies
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Protection → Conditional Access → Policies.
+
+Select New policy → Create new policy.
+📸 Screenshot #1: New CA policy screen (/screenshots/01-new-policy.png)
+
+Step 2 — Name the Policy
+
+Enter the policy name:
+Require MFA for Cloud App Access (Lab Demo)
+
+Keep it descriptive and follow your organization’s naming standards.
+📸 Screenshot #2: Policy naming screen (/screenshots/02-policy-name.png)
+
+Step 3 — Assign Users or Groups
+
+In the Assignments section, select Users.
+
+Choose Select users and groups.
+
+Assign your test user or a test group.
+
+Do NOT assign to all users yet — this is dangerous for labs.
+📸 Screenshot #3: User/group assignment (/screenshots/03-user-group-assignment.png)
+
+Step 4 — Select Cloud Applications
+
+In the Assignments panel, select Cloud apps.
+
+Choose Select apps.
+
+Select apps such as:
+
+Microsoft 365
+
+Office 365 Exchange Online
+
+Azure Portal
+📸 Screenshot #4: Cloud app selection (/screenshots/04-cloud-apps.png)
+
+Step 5 — Configure Policy Conditions
+
+Under Conditions, configure:
+
+Locations → Include Any location
+
+Locations → Exclude Trusted locations (optional)
+
+*Device platforms → iOS/Android/Windows/macOS as needed
+
+*Client apps → Browser + Modern Auth Clients
+📸 Screenshot #5: Conditions configuration (/screenshots/05-policy-conditions.png)
+
+Step 6 — Configure Grant Controls
+
+Go to Grant controls.
+
+Select Require multifactor authentication.
+
+Choose Require all selected controls.
+📸 Screenshot #6: Grant controls selection (/screenshots/06-grant-controls.png)
+
+Step 7 — Enable Policy in Report-Only Mode
+
+Scroll to Enable policy.
+
+Select Report-only.
+
+This prevents accidental lockouts and shows only simulated behavior.
+📸 Screenshot #7: Report-only mode selection (/screenshots/07-report-only.png)
+
+Step 8 — Save and Validate
+
+Click Create to save the policy.
+
+Navigate to Conditional Access → What If.
+
+Select your test user, selected cloud app, and location.
+
+Run simulation.
+📸 Screenshot #8: What-If simulation results (/screenshots/08-what-if.png)

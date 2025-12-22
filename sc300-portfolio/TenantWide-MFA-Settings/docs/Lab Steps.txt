@@ -1,0 +1,65 @@
+Lab Steps
+
+Step 1 — Review Existing MFA Settings
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Security → Authentication methods → Policies.
+
+Review current MFA registration policies and any conditional access MFA policies.
+
+📸 Screenshot #1: MFA overview page (/screenshots/01-mfa-overview.png)
+
+Step 2 — Configure Default MFA Registration Policies
+
+Go to Microsoft Entra → Security → Authentication methods → Policies → Multi-Factor Authentication.
+
+Enable Require MFA registration for all users or selected groups.
+
+Configure enforcement timeline (e.g., 14 days for registration).
+
+📸 Screenshot #2: MFA registration policy configuration (/screenshots/02-mfa-registration.png)
+
+Step 3 — Enforce MFA for Users or Groups
+
+Navigate to Microsoft Entra → Security → Conditional Access.
+
+Create a new Conditional Access policy:
+
+Assign All users or specific groups
+
+Select Require Multi-Factor Authentication under Grant controls
+
+Enable policy
+
+📸 Screenshot #3: Conditional Access MFA policy (/screenshots/03-mfa-policy.png)
+
+Step 4 — Configure Trusted IPs (Optional)
+
+Navigate to Microsoft Entra → Security → MFA → Trusted IPs.
+
+Add IP ranges that can bypass MFA if desired.
+
+📸 Screenshot #4: Trusted IP configuration (/screenshots/04-trusted-ips.png)
+
+Step 5 — Test MFA Enforcement
+
+Log in as a test user.
+
+Ensure that MFA registration is prompted.
+
+Complete registration using Microsoft Authenticator or another configured method.
+
+Attempt login again to confirm MFA challenge.
+
+📸 Screenshot #5: Test user MFA registration (/screenshots/05-test-mfa.png)
+
+Step 6 — Monitor MFA Status
+
+Navigate to Microsoft Entra → Users → Multi-Factor Authentication.
+
+Confirm that all targeted users are registered and MFA is enforced.
+
+Use reports to view registration progress and non-compliant users.
+
+📸 Screenshot #6: MFA status report (/screenshots/06-mfa-status.png)

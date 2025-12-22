@@ -1,0 +1,58 @@
+============================================================
+SC-300 — Assign Microsoft Entra Roles to Users for Enterprise Apps
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Review Entra ID Roles
+------------------------------------------------------------
+1. Navigate to Microsoft Entra Admin Center
+2. Go to Roles and administrators
+3. Review roles related to application management:
+   - Application Administrator
+   - Cloud Application Administrator
+   - Global Administrator
+
+📸 Screenshot: /screenshots/01-entra-roles.png
+
+------------------------------------------------------------
+Step 2 — Assign Entra ID Role
+------------------------------------------------------------
+1. Select "Application Administrator" or "Cloud Application Administrator"
+2. Click "Add assignments"
+3. Select a test user
+4. Assign the role
+
+📸 Screenshot: /screenshots/02-assign-role.png
+
+------------------------------------------------------------
+Step 3 — Validate Role Permissions
+------------------------------------------------------------
+1. Sign in as the assigned user
+2. Navigate to Enterprise Applications
+3. Attempt to manage application settings
+4. Confirm permitted actions
+
+📸 Screenshot: /screenshots/03-validate-permissions.png
+
+------------------------------------------------------------
+Step 4 — Test Access Boundaries
+------------------------------------------------------------
+1. Attempt to perform actions outside role scope
+2. Verify access is denied
+3. Confirm least-privilege enforcement
+
+📸 Screenshot: /screenshots/04-access-boundaries.png
+
+------------------------------------------------------------
+Step 5 — Review Audit Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Audit logs
+2. Filter by role assignment activity
+3. Review role assignment and access events
+
+📸 Screenshot: /screenshots/05-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

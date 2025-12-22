@@ -1,0 +1,76 @@
+# AI Builder Lab  
+## 🧪 Lab Steps  
+
+## 🔹 Part 1 — Create an AI Builder Model  
+1. Go to **Power Apps** → left menu → **AI Models**.  
+2. Select **Build a model**.  
+3. Choose either:  
+   - **Form Processing** (extract data from documents), or  
+   - **Prediction** (predict outcomes based on data).  
+4. Click **Create**.
+
+📸 **Screenshot:** AI Builder model creation screen
+
+---
+
+## 🔹 Part 2 — Upload and Tag Training Data  
+### If using *Form Processing*:  
+1. Upload at least **5 sample documents**.  
+2. Tag fields (Name, Address, Invoice Number, etc.).  
+3. Save.
+
+📸 **Screenshot:** Tagging fields in Form Processing
+
+### If using *Prediction*:  
+1. Select a Dataverse table.  
+2. Choose the column to predict.  
+3. Select input fields.  
+4. Confirm dataset quality check.
+
+📸 **Screenshot:** Prediction model data quality screen
+
+---
+
+## 🔹 Part 3 — Train and Publish the Model  
+1. Click **Train Model**.  
+2. Wait until the status changes to **Trained**.  
+3. Review accuracy metrics.  
+4. Click **Publish**.
+
+📸 **Screenshot:** Model training complete + accuracy metrics
+
+---
+
+## 🔹 Part 4 — Integrate Model into a Canvas App  
+1. Open **Power Apps Studio**.  
+2. Create a new **Canvas App**.  
+3. Insert → **AI Builder** → select your published model.  
+4. Bind the model output to a text label or gallery.
+
+📸 **Screenshot:** AI Builder component inside Power Apps
+
+### OR integrate into Power Automate  
+1. Create a new **Automated Flow**.  
+2. Add a step → **AI Builder** → choose your model.  
+3. Pass data from previous steps.  
+4. Send output to email or Dataverse.
+
+📸 **Screenshot:** AI Builder action inside Power Automate flow
+
+---
+
+## 🔹 Part 5 — Test the Model  
+1. Upload a new document **(Form Processing)**  
+   - Verify extracted fields appear correctly.  
+
+📸 **Screenshot:** Extracted document fields
+
+2. Run flow **(Prediction model)**  
+   - Confirm output prediction value and confidence.
+
+📸 **Screenshot:** Prediction output in run history
+
+---
+
+## 🎉 Lab Complete  
+Your AI Builder model is now trained, published, and integrated into Power Apps or Power Automate.

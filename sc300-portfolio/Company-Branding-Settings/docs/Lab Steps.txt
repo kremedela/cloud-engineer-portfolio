@@ -1,0 +1,86 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Current Company Branding
+Log in to the Azure Portal.
+Navigate to Microsoft Entra → Identity → Company branding.
+If this is the first time accessing the blade, it will show “Configure” options.
+Review:
+
+Existing branding profiles
+
+Locale-specific branding (if any)
+📸 (/screenshots/01-branding-overview.png)
+
+Step 2 — Create a New Company Branding Profile
+Click Configure.
+Upload the following optional assets:
+
+Banner logo (280 × 60)
+
+Background image (1920 × 1080 recommended)
+
+Square logo for applications
+Provide text values for:
+
+Sign-in message
+
+Helpdesk link
+
+Footer information
+📸(/screenshots/02-branding-config.png)
+
+Step 3 — Configure Advanced Branding Settings
+Scroll down to advanced settings.
+Select options such as:
+
+Show account picker background image
+
+Customize sign-in form background color
+
+Add “Terms of Use” or “Privacy” links
+Add optional language-specific settings by assigning locale codes.
+📸(/screenshots/03-advanced-branding.png)
+
+Step 4 — Save & Publish Branding
+Click Save.
+Azure will apply the branding to:
+
+Microsoft Entra sign-in pages
+
+MyApps portal
+
+MFA authentication pages
+Expect changes to take 1–3 minutes.
+📸(/screenshots/04-branding-saved.png)
+
+Step 5 — Test Sign-In Branding as an End User
+Open an InPrivate or Incognito window.
+Navigate to any Microsoft login endpoint such as:
+
+https://login.microsoftonline.com
+
+https://myapps.microsoft.com
+
+Enter your tenant's domain (e.g., test@yourcustomdomain.com
+).
+Confirm new branding displays correctly:
+
+Logo appears
+
+Background visible
+
+Text updates applied
+📸 Screenshot #5: Branded login page (/screenshots/05-login-test.png)
+
+Step 6 — Edit or Remove Branding
+Return to Microsoft Entra → Company branding.
+Open your branding profile.
+Test modifying:
+
+Logo replacement
+
+Text updates
+
+Removing images
+Save changes and refresh the sign-in page to validate.
+📸(/screenshots/06-branding-updated.png)

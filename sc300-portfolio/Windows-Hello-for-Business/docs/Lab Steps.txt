@@ -1,0 +1,59 @@
+Lab Steps
+
+Step 1 — Review Windows Hello for Business Requirements
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Security → Authentication methods → Windows Hello for Business.
+
+Review requirements for passwordless authentication (device, OS, Intune enrollment).
+
+📸 Screenshot #1: WHfB overview page (/screenshots/01-whfb-overview.png)
+
+Step 2 — Configure WHfB Authentication Methods
+
+Go to Microsoft Entra → Security → Authentication methods → Windows Hello for Business.
+
+Enable WHfB for targeted users.
+
+Configure PIN and biometric options as allowed.
+
+📸 Screenshot #2: WHfB method configuration (/screenshots/02-whfb-methods.png)
+
+Step 3 — Deploy WHfB Policies via Intune
+
+Navigate to Endpoint Manager → Devices → Windows → Configuration profiles → Create profile.
+
+Choose Windows 10 and later → Identity protection or Passwordless template.
+
+Configure WHfB PIN complexity and biometric settings.
+
+📸 Screenshot #3: Intune WHfB policy creation (/screenshots/03-whfb-intune-policy.png)
+
+Step 4 — Assign WHfB Policies to Users or Groups
+
+In Intune, assign the policy to a test user group.
+
+Save and deploy.
+
+📸 Screenshot #4: Policy assignment page (/screenshots/04-whfb-assignment.png)
+
+Step 5 — Test WHfB Login on a Device
+
+Log in to a test Windows 10/11 device with a user from the assigned group.
+
+Complete WHfB enrollment (PIN, biometric).
+
+Attempt passwordless login to verify functionality.
+
+📸 Screenshot #5: Test WHfB login (/screenshots/05-whfb-login.png)
+
+Step 6 — Monitor Deployment Status
+
+In Intune, navigate to Devices → Monitor → Configuration profiles → Deployment status.
+
+Confirm that the WHfB policy is successfully applied.
+
+Troubleshoot any failed devices or enrollment issues.
+
+📸 Screenshot #6: Deployment status report (/screenshots/06-whfb-status.png)

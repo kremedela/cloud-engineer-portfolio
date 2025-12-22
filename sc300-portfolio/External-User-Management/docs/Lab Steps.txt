@@ -1,0 +1,45 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Invite a Single External User
+
+Log into Azure Portal
+
+Navigate to Microsoft Entra → Users → New guest user → Invite user
+
+Fill in the external user’s email and display name
+
+Optionally add a personal message
+
+Click Invite
+
+Verify the user appears in Users → Guest users
+📸 Screenshot #1: Single external user invited (/screenshots/01-invite-user.png)
+
+Step 2 — Invite External Users in Bulk via CSV
+
+Prepare a CSV file with UserPrincipalName, DisplayName columns
+
+Navigate to Users → Bulk invite
+
+Upload the CSV
+
+Review and submit invitations
+
+Verify all users appear as Guest users
+📸 Screenshot #2: Bulk invitation completed (/screenshots/02-bulk-invite.png)
+
+Step 3 — Assign Roles and Groups to External Users
+
+Navigate to Users → Select guest user → Groups
+
+Add the user to relevant Microsoft 365 Groups
+
+Optionally assign directory roles if required
+📸 Screenshot #3: Guest user group membership (/screenshots/03-assign-groups.png)
+
+Step 4 — Validate Invitations and Access
+
+Check external user email for invitation acceptance
+
+Confirm user can sign in and access assigned resources
+📸 Screenshot #4: Guest user accepted invitation (/screenshots/04-validate-access.png)

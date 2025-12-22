@@ -1,0 +1,14 @@
+STEP 1 — Initialize Flask App
+- Create app.py and import Flask
+
+STEP 2 — Set Up Database
+- Create SQLite DB and tables
+
+STEP 3 — Build Endpoints
+- Create GET/POST/PUT/DELETE routes
+
+STEP 4 — Test API
+- Use Postman to test endpoints
+
+STEP 5 — Error Handling
+- Add try/except and response codes

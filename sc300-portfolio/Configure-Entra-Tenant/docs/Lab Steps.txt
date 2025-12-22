@@ -1,0 +1,59 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Access and Review Tenant Properties
+Log into the Azure Portal.
+Navigate to Microsoft Entra → Overview.
+Take note of Tenant ID, Primary Domain, and Tenant Name.
+
+
+Step 2 — Configure Tenant Properties
+Go to Microsoft Entra → Tenant properties.
+Edit the following:
+
+Company name
+
+Contact information / technical contact
+
+Default language
+
+Country/region
+
+
+Step 3 — Configure User Settings
+Navigate to Microsoft Entra → Users → User settings.
+Configure:
+
+Self-service password reset
+
+User permissions for app registrations
+
+External collaboration settings
+
+
+Step 4 — Configure Group Settings
+Go to Microsoft Entra → Groups → Settings.
+Set:
+
+Group expiration policies
+
+Group creation permissions
+
+Group naming policies
+
+
+Step 5 — Configure Device Settings
+Navigate to Microsoft Entra → Devices → Device settings.
+Configure:
+
+Device restrictions
+
+Maximum device limit per user
+
+Require Multi-Factor Authentication (MFA) for device registration
+
+
+Step 6 — Verify Tenant Configuration
+Create a test user in the portal.
+Assign the user to a group.
+Register a test device.
+Confirm that all configurations are applied correctly.

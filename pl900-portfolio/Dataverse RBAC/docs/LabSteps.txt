@@ -1,0 +1,86 @@
+# Dataverse RBAC (Role-Based Access Control)
+
+## 📌 Prerequisites
+- Access to a Power Platform environment  
+- Dataverse database enabled  
+- At least one **custom table** (from Lab 4)
+
+---
+
+## ✅ Step 1 — Create a New Business Unit
+1. Go to **admin.powerplatform.microsoft.com**
+2. Select your environment → **Settings**
+3. Navigate to:
+   **Users + Permissions → Business Units**
+4. Click **New Business Unit**
+5. Enter:
+   - Name: **MM-Operations**
+   - Parent BU: *Your root BU*
+6. Click **Save**
+
+📌 This Business Unit will be used to segment data access for users or teams.
+
+---
+
+## ✅ Step 2 — Create a New Security Role
+1. Inside the same environment, go to:  
+   **Power Apps → Tables → Settings → Security roles**
+2. Click **New role**
+3. Name it: **MM Operations Analyst**
+4. Choose the **Business Unit**:
+   - MM-Operations
+
+This role will own permissions for the Operations users.
+
+---
+
+## ✅ Step 3 — Configure Table Permissions
+1. Open the **MM Operations Analyst** role  
+2. Go to the **Core** tab
+3. Under table permissions, configure:
+
+| Table | Read | Write | Append | Assign | Share |
+|-------|------|-------|--------|--------|--------|
+| IncidentTracking (your custom table) | Business Unit | Business Unit | BU | None | None |
+| Contact | Organization | Read Only | Org | None | None |
+
+4. Save the role
+
+📌 This ensures they can only see records within their BU.
+
+---
+
+## ✅ Step 4 — Assign the Security Role to a User
+1. Go to:  
+   **Users + Permissions → Users**
+2. Select a user (ex: test user)
+3. Click **Manage Roles**
+4. Assign:
+   - **MM Operations Analyst**
+
+---
+
+## ✅ Step 5 (Optional) — Create a Team & Assign Role
+1. Go to  
+   **Users + Permissions → Teams**
+2. Click **New Team**
+3. Enter:
+   - Name: **Ops Analysts Team**
+   - Type: **Security**
+   - Business Unit: **MM-Operations**
+4. Save
+
+5. Open the team → **Security roles**
+6. Assign:
+   - MM Operations Analyst role
+
+📌 Any user added to this team inherits the role automatically.
+
+---
+
+## ✅ Step 6 — Testing the Role
+Log in as the assigned user:
+- Verify you **can see** only BU matching records  
+- Verify you cannot **modify**, **delete**, or **assign** outside your permissions  
+- Ensure records from other BUs are hidden  
+

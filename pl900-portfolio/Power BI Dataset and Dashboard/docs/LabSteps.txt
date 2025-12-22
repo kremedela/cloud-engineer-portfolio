@@ -1,0 +1,93 @@
+# 🧪 Power BI Dataset and Dashboard (Step-by-Step)
+
+## Step 1 — Open Power BI Desktop
+1. Launch **Power BI Desktop**.
+2. Select **Get Data**.
+
+📸 *Screenshot: Power BI Desktop home screen*
+
+---
+
+## Step 2 — Load Data Source
+1. Click **Get Data** → choose source:
+   - Excel
+   - SharePoint online list
+   - Dataverse table
+   - SQL Server
+   - CSV
+2. Click **Load**.
+
+📸 *Screenshot: Get Data dialog window*
+
+---
+
+## Step 3 — Transform Data in Power Query
+1. Click **Transform Data**.
+2. Apply common transformations:
+   - Remove columns  
+   - Rename columns  
+   - Change data types  
+   - Remove errors  
+   - Add calculated columns  
+
+3. Click **Close & Apply**.
+
+📸 *Screenshot: Power Query Editor with transformations applied*
+
+---
+
+## Step 4 — Build Report Visuals
+1. Add visuals:
+   - Bar chart  
+   - Table  
+   - Card (KPI)  
+   - Donut chart  
+2. Use fields from the dataset.
+3. Adjust colors, labels, and formatting.
+
+📸 *Screenshot: Report page with visuals added*
+
+---
+
+## Step 5 — Create Measures (Optional)
+1. Right-click your table → **New Measure**.
+2. Add simple DAX examples:
+   - Total Sales  
+   - Average Score  
+   - Count of Records  
+
+📸 *Screenshot: DAX measure editor*
+
+---
+
+## Step 6 — Publish to Power BI Service
+1. Click **Publish** on top ribbon.
+2. Choose a workspace.
+
+📸 *Screenshot: Publishing dialog*
+
+---
+
+## Step 7 — Create Dashboard in Power BI Service
+1. Open the published report online.
+2. Hover over a visual → click **Pin visual**.
+3. Create a **New Dashboard** or pin to an existing one.
+
+📸 *Screenshot: Pin visual to dashboard*
+
+---
+
+## Step 8 — Share Dashboard
+1. Open the dashboard.
+2. Click **Share**.
+3. Enter email(s) of users or groups.
+4. Adjust permissions:
+   - Allow resharing  
+   - Allow building on dataset  
+
+📸 *Screenshot: Dashboard sharing window*
+
+---
+
+## ✔ End of Lab
+You now have a fully working dataset, report, and dashboard published in Power BI.

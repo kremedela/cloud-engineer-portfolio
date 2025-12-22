@@ -1,0 +1,62 @@
+============================================================
+SC-300 — Configure and Manage User and Admin Consent
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Review App Permission Requests
+------------------------------------------------------------
+1. Navigate to Entra ID → App Registrations → select app
+2. Go to API Permissions
+3. Review delegated and application permissions requested
+
+📸 Screenshot: /screenshots/01-app-permissions.png
+
+------------------------------------------------------------
+Step 2 — Configure User Consent Settings
+------------------------------------------------------------
+1. Navigate to Entra ID → Enterprise Applications → Consent & Permissions
+2. Enable or restrict user consent for apps
+3. Save settings
+
+📸 Screenshot: /screenshots/02-user-consent.png
+
+------------------------------------------------------------
+Step 3 — Configure Admin Consent Settings
+------------------------------------------------------------
+1. Navigate to Entra ID → Enterprise Applications → Admin Consent
+2. Require admin approval for specific apps or permissions
+3. Assign admins for consent approval
+
+📸 Screenshot: /screenshots/03-admin-consent.png
+
+------------------------------------------------------------
+Step 4 — Assign Required Roles
+------------------------------------------------------------
+1. Assign roles such as Application Administrator or Privileged Role Administrator
+2. Ensure roles have consent approval capability
+
+📸 Screenshot: /screenshots/04-assign-roles.png
+
+------------------------------------------------------------
+Step 5 — Validate Consent Flows
+------------------------------------------------------------
+1. Log in as test user → attempt to access app
+2. Observe consent prompts
+3. Log in as admin → approve/reject app consent
+4. Confirm proper enforcement
+
+📸 Screenshot: /screenshots/05-consent-flow.png
+
+------------------------------------------------------------
+Step 6 — Audit Consent Approvals
+------------------------------------------------------------
+1. Navigate to Entra ID → Audit Logs
+2. Filter by Consent events
+3. Verify user and admin consent activities
+
+📸 Screenshot: /screenshots/06-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

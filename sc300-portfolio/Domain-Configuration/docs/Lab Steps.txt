@@ -1,0 +1,65 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Current Domains in the Tenant
+Log into the Azure Portal.
+Navigate to Microsoft Entra → Identity → Custom domain names.
+Review the list of existing domains:
+
+Initial .onmicrosoft.com domain
+
+Verified custom domains
+Check domain status indicators (Verified, Unverified, Federated, Managed).
+📸(/screenshots/01-domain-list.png)
+
+Step 2 — Add a New Custom Domain
+Click Add custom domain.
+Enter the domain name you want to add, such as:
+contoso-lab-domain.com
+Click Add domain.
+Microsoft will now show DNS verification instructions.
+📸(/screenshots/02-add-domain.png)
+
+Step 3 — Add DNS TXT Record to Verify Ownership
+Log into your DNS provider (GoDaddy, Cloudflare, Namecheap, etc.).
+Create a new TXT record using the values shown in Azure:
+
+TXT Name/Host = @ (or blank, depending on provider)
+TXT Value = The unique MS verification token
+TTL = 1 minute or default
+
+Save the record.
+Wait 1–10 minutes for propagation.
+📸(/screenshots/03-dns-txt.png)
+
+Step 4 — Verify the Domain in Microsoft Entra
+Return to the domain verification page in Azure.
+Click Verify.
+If DNS is correct, the domain status changes to Verified.
+If not, review DNS record formatting.
+📸(/screenshots/04-verified.png)
+
+Step 5 — Assign the Domain to a User (UPN Update)
+Navigate to Microsoft Entra → Users.
+Select your test user.
+Click Edit username.
+Change the UPN (User Principal Name) domain dropdown to your new custom domain.
+Save changes.
+📸(/screenshots/05-upn-change.png)
+
+Step 6 — Assign the Domain as the Default (Optional)
+Navigate back to Microsoft Entra → Custom domain names.
+Select the domain → Set as default.
+This will make all newly created users automatically use the custom domain.
+📸(/screenshots/06-default-domain.png)
+
+Step 7 — Troubleshoot Domain Verification (If Needed)
+If verification fails:
+
+Confirm TXT record prefixes and values
+
+Ensure only one TXT record is created
+
+Verify no trailing spaces
+
+Use tools like DNSChecker.org to validate propagation
+📸(/screenshots/07-dns-troubleshooting.png)

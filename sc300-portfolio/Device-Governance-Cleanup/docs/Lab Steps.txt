@@ -1,0 +1,41 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Review Existing Devices
+Log into Azure Portal.
+Navigate to Microsoft Entra → Devices → All Devices.
+Document all devices, their registration type, compliance status, and last activity date.
+📸(/screenshots/01-all-devices.png)
+
+Step 2 — Identify Inactive, Stale, or Non-Compliant Devices
+Use filters in the portal to find:
+
+Devices not used in the last 30/60/90 days
+
+Devices marked non-compliant
+
+Devices registered by former employees
+📸(/screenshots/02-stale-devices.png)
+
+Step 3 — Apply Governance Policies
+Navigate to Microsoft Entra → Devices → Device Settings.
+
+Require MFA for device registration
+
+Restrict device types or OS versions
+
+Set maximum device count per user
+📸(/screenshots/03-device-policies.png)
+
+Step 4 — Remove or Retire Devices
+For stale or non-compliant devices:
+
+Select device → Delete or Disable device
+
+Confirm action
+📸(/screenshots/04-device-removed.png)
+
+Step 5 — Monitor and Validate Compliance
+Navigate to Microsoft Entra → Devices → Compliance Policies.
+Verify that remaining devices comply with policies.
+Check Conditional Access reports for enforcement.
+📸(/screenshots/05-compliance-verified.png)

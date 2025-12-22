@@ -1,0 +1,14 @@
+STEP 1 — Load Dataset
+- Import pandas and read CSV
+
+STEP 2 — Clean Data
+- Handle missing values and preprocess
+
+STEP 3 — Explore Data
+- Compute summary statistics, correlations
+
+STEP 4 — Visualize
+- Create charts with Matplotlib/Seaborn
+
+STEP 5 — Export Results
+- Save charts/images/CSV

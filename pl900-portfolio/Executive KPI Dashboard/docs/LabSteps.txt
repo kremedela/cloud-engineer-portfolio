@@ -1,0 +1,102 @@
+# Executive KPI Dashboard  
+## Step-by-Step Instructions
+
+---
+
+# Exercise 1 — Prepare and Import Data
+1. Open **Power BI Desktop**.
+2. Select **Get Data → Excel / CSV / SQL / Dataverse**.
+3. Import the following datasets:
+   - FactFinance
+   - FactSales
+   - DimDate
+   - DimCustomer
+   - DimRegion
+4. Validate data types (dates, currency, text fields).
+5. Clean columns (rename, remove duplicates).
+6. Disable auto date/time in Power BI options.
+
+📸 Screenshot: Data model view with all tables loaded.
+
+---
+
+# Exercise 2 — Build the Data Model
+1. Go to **Model View**.
+2. Create relationships:
+   - DimDate → FactFinance
+   - DimDate → FactSales
+   - DimCustomer → FactSales
+   - DimRegion → FactSales
+3. Mark DimDate as the official Date Table.
+4. Hide key columns and system fields.
+
+📸 Screenshot: Completed star schema model.
+
+---
+
+# Exercise 3 — Create KPI DAX Measures
+Create measures:
+- `Total Revenue`
+- `Total Expenses`
+- `Total Profit`
+- `Profit Margin %`
+- `YOY Revenue Growth %`
+- `Customer Count`
+
+📸 Screenshot: Measure pane showing KPI measures.
+
+---
+
+# Exercise 4 — Build Executive Dashboard Visuals
+1. Add KPI Cards:
+   - Revenue
+   - Profit
+   - Expenses
+   - Margin %
+   - YOY Growth
+2. Add Trend Visuals:
+   - Line chart: Revenue & Profit over time
+   - Bar chart: Revenue by Region
+3. Add Customer Insights:
+   - Donut chart: Customer Segments
+   - Table: Top 10 customers
+
+📸 Screenshot: KPI cards + line chart.
+
+---
+
+# Exercise 5 — Add Slicers & Interactivity
+1. Add slicers:
+   - Year
+   - Quarter
+   - Region
+   - Segment
+2. Create Drill-Through Page:
+   - Customer-level performance
+   - Revenue trends
+3. Add Tooltip Page with mini sparklines.
+
+📸 Screenshot: Slicer panel.
+
+---
+
+# Exercise 6 — Formatting & Optimization
+1. Apply conditional formatting (profit margin, YOY growth).
+2. Clean & optimize model:
+   - Hide unused columns
+   - Optimize relationships
+   - Use measures instead of calculated columns
+
+📸 Screenshot: Conditional formatting panel.
+
+---
+
+# Exercise 7 — Publish to Power BI Service
+1. File → Publish to desired workspace.
+2. Create dashboard by pinning visuals.
+3. Configure:
+   - Scheduled dataset refresh
+   - RLS roles (if applicable)
+   - KPI alerts
+
+📸 Screenshot: Published dashboard in Power BI Service.

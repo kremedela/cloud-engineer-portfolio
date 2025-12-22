@@ -1,0 +1,58 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Create Security Groups for Zero-Trust
+Log into Azure Portal.
+Navigate to Microsoft Entra → Groups → + New Group.
+
+Group Type: Security
+
+Name: ZT-Compliant-Users
+
+Membership Type: Assigned or Dynamic (based on department, role, or device state)
+Add test users who should follow Zero-Trust policies.
+📸(/screenshots/01-zt-group.png)
+
+Step 2 — Configure Device Compliance Policies
+Navigate to Microsoft Entra → Devices → Compliance Policies → + New policy.
+
+Platform: Windows/iOS/Android
+
+Rules: Require device encryption, password, updated OS, compliant antivirus
+
+Assign policy to ZT-Compliant-Users group
+📸(/screenshots/02-device-policy.png)
+
+Step 3 — Apply Conditional Access Policies
+Navigate to Microsoft Entra → Security → Conditional Access → + New Policy.
+Configure:
+
+Users: ZT-Compliant-Users
+
+Cloud apps: Target applications (e.g., HR app, SharePoint)
+
+Conditions: Include only compliant devices
+
+Access controls: Require MFA and compliant device
+Enable policy.
+📸(/screenshots/03-ca-policy.png)
+
+Step 4 — Test Access for Compliant Devices
+Log in as a test user on a device marked compliant.
+Access targeted app → should succeed.
+📸(/screenshots/04-access-compliant.png)
+
+Step 5 — Test Access for Non-Compliant Devices
+Log in as the same user on a non-compliant device.
+Access targeted app → should be blocked or limited per policy.
+📸(/screenshots/05-access-denied.png)
+
+Step 6 — Review Policy Enforcement
+Navigate to Microsoft Entra → Security → Conditional Access → Insights and Reporting.
+Verify:
+
+Policy evaluation results
+
+Users blocked due to non-compliance
+
+Devices compliant and non-compliant
+📸(/screenshots/06-ca-report.png)

@@ -1,0 +1,58 @@
+🧪 Lab Steps (Full Detailed Instructions)
+
+Step 1 — Create an Administrative Unit for HR
+Log into Azure Portal.
+Navigate to Microsoft Entra → Administrative Units → + New administrative unit.
+Enter:
+
+Name: HR-AU
+
+Description: Administrative Unit for HR employees
+Click Create.
+📸(/screenshots/01-hr-au.png)
+
+Step 2 — Assign HR Users to the Administrative Unit
+Select the HR-AU administrative unit → Members → + Add members.
+Add test HR users only.
+Verify membership.
+📸(/screenshots/02-hr-users-au.png)
+
+Step 3 — Create a Custom Role for HR System Access
+Navigate to Microsoft Entra → Roles → + New custom role.
+Name: HR-System-Access
+Description: Access to HR app resources
+Permissions:
+
+Read/write access to HR app
+
+No access to other critical resources
+📸(/screenshots/03-hr-role.png)
+
+Step 4 — Assign the Custom Role Scoped to HR Administrative Unit
+Go to Microsoft Entra → Roles → HR-System-Access → Assignments → + Add assignment.
+Select:
+
+Users: HR employees in AU
+
+Scope: HR-AU
+Verify role assignment.
+📸(/screenshots/04-role-assignment.png)
+
+Step 5 — Apply Conditional Access Policies for HR Systems
+Navigate to Microsoft Entra → Security → Conditional Access → + New Policy.
+Configure:
+
+Target: HR users in HR-AU
+
+Applications: HR system app
+
+Grant: Require MFA and compliant device
+Enable policy.
+📸(/screenshots/05-ca-policy.png)
+
+Step 6 — Test Access for HR and Non-HR Users
+Log in as an HR test user → access HR app → should succeed.
+Log in as a non-HR user → access HR app → should be denied.
+Document results.
+📸(/screenshots/06-hr-access-success.png)
+📸(/screenshots/07-non-hr-blocked.png)

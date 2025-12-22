@@ -1,0 +1,51 @@
+============================================================
+SC-300 — Automate User Deactivation
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Identify User for Deactivation
+------------------------------------------------------------
+1. Navigate to Microsoft Entra Admin Center
+2. Go to Users → Select test user
+3. Confirm current access, roles, and group membership
+
+📸 Screenshot: /screenshots/01-user-before.png
+
+------------------------------------------------------------
+Step 2 — Disable User Sign-In
+------------------------------------------------------------
+1. Open PowerShell as Administrator
+2. Connect to Microsoft Graph
+3. Disable the user account
+
+📸 Screenshot: /screenshots/02-disable-user.png
+
+------------------------------------------------------------
+Step 3 — Remove Group Memberships
+------------------------------------------------------------
+1. Identify user group memberships
+2. Remove user from all security and M365 groups
+
+📸 Screenshot: /screenshots/03-remove-groups.png
+
+------------------------------------------------------------
+Step 4 — Remove Role Assignments
+------------------------------------------------------------
+1. Review assigned directory roles
+2. Remove any Entra ID role assignments
+
+📸 Screenshot: /screenshots/04-remove-roles.png
+
+------------------------------------------------------------
+Step 5 — Verify Deactivation
+------------------------------------------------------------
+1. Confirm sign-in blocked
+2. Validate no remaining access
+3. Review audit logs for deactivation activity
+
+📸 Screenshot: /screenshots/05-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

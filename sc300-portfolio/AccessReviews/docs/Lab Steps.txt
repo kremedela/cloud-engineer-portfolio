@@ -1,0 +1,62 @@
+============================================================
+SC-300 — Access Reviews
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Prepare Review Scope
+------------------------------------------------------------
+1. Navigate to Microsoft Entra Admin Center
+2. Go to Identity Governance → Access Reviews
+3. Identify a security group or application to review
+4. Ensure test users are members of the group
+
+📸 Screenshot: /screenshots/01-review-scope.png
+
+------------------------------------------------------------
+Step 2 — Create Access Review
+------------------------------------------------------------
+1. Click "New access review"
+2. Select review type:
+   - Security group OR
+   - Application access
+3. Select target group/application
+4. Name the review:
+   "Quarterly Group Access Review"
+
+📸 Screenshot: /screenshots/02-create-review.png
+
+------------------------------------------------------------
+Step 3 — Configure Review Settings
+------------------------------------------------------------
+1. Choose reviewers:
+   - Group owners OR
+   - Selected users
+2. Set review duration (e.g., 7 days)
+3. Enable auto-apply results
+4. Set default decision to "Remove access"
+
+📸 Screenshot: /screenshots/03-review-settings.png
+
+------------------------------------------------------------
+Step 4 — Perform Review
+------------------------------------------------------------
+1. Sign in as reviewer
+2. Review each user’s access
+3. Approve or deny access
+4. Submit review
+
+📸 Screenshot: /screenshots/04-perform-review.png
+
+------------------------------------------------------------
+Step 5 — Apply Results
+------------------------------------------------------------
+1. Allow review period to complete
+2. Verify access changes applied automatically
+3. Confirm removed users no longer have group access
+
+📸 Screenshot: /screenshots/05-review-results.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

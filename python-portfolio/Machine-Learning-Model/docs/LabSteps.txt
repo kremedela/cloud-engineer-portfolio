@@ -1,0 +1,14 @@
+STEP 1 — Load Dataset
+- Import CSV with pandas
+
+STEP 2 — Preprocess Features
+- Scale/encode features as needed
+
+STEP 3 — Train Model
+- Use scikit-learn model.fit()
+
+STEP 4 — Evaluate Performance
+- Compute accuracy, confusion matrix, F1-score
+
+STEP 5 — Save Predictions/Model
+- Export results using pickle or CSV

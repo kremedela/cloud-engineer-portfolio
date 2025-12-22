@@ -1,0 +1,106 @@
+# Power Platform Governance  
+## Step-by-Step Instructions
+
+---
+
+# Exercise 1 — Audit Existing Environments
+1. Navigate to **Power Platform Admin Center** (admin.powerplatform.microsoft.com).
+2. Select **Environments**.
+3. Review:
+   - Environment type (Production, Sandbox, Developer)
+   - Region
+   - Dataverse enabled?
+   - Owner
+4. Document each environment’s purpose.
+
+📸 Screenshot: List of environments.
+
+---
+
+# Exercise 2 — Create Governance Naming Standards
+1. Draft a naming format, e.g.:
+   - `DEV-<Team>-<Solution>`
+   - `TEST-<Team>-<Solution>`
+   - `PROD-<App Name>`
+2. Update environment names as needed.
+
+📸 Screenshot: Updated environment names.
+
+---
+
+# Exercise 3 — Configure DLP (Data Loss Prevention) Policies
+1. Go to **Policies → Data Policies**.
+2. Click **+ New Policy**.
+3. Name policy: `Enterprise-DLP-Standard`.
+4. Add connectors:
+   - Business: SharePoint, Dataverse, Office 365  
+   - Non-Business: Twitter, Gmail, LinkedIn  
+5. Block risky connectors entirely:
+   - SQL Server (optional)
+   - FTP
+   - Custom APIs (if required)
+6. Assign policy to specific environments.
+
+📸 Screenshot: DLP policy connector grouping.
+
+---
+
+# Exercise 4 — Apply Security Roles & Permissions
+1. Select an environment.
+2. Open **Settings → Users + permissions**.
+3. Assign roles:
+   - **Environment Admin**
+   - **Environment Maker**
+   - **User**
+4. Restrict Maker permissions in production environments.
+
+📸 Screenshot: Role assignments.
+
+---
+
+# Exercise 5 — Enable Auditing and Monitoring
+1. Navigate to **Power Platform Admin Center → Analytics**.
+2. Enable monitoring for:
+   - Power Apps usage
+   - Power Automate flow usage
+   - Errors and failures
+3. Optionally configure alerts using Power Automate:
+   - "When a flow fails → Send email to admin"
+
+📸 Screenshot: Analytics dashboard.
+
+---
+
+# Exercise 6 — Implement Solution-Based ALM Structure
+1. Go to an environment.
+2. Create a new **Solution**:
+   - Name: `Core-Governance-Solution`
+3. Store:
+   - Apps
+   - Flows
+   - Tables
+4. Confirm that developers only work inside solutions.
+
+📸 Screenshot: Solutions screen.
+
+---
+
+# Exercise 7 — Validate Governance Controls
+Perform governance tests:
+- Attempt to use a blocked connector  
+- Attempt to build an app in a restricted environment  
+- Create a flow referencing business + non-business data → should fail  
+
+📸 Screenshot: DLP policy error message.
+
+---
+
+# Exercise 8 — Document Governance Policies
+Create documentation covering:
+- Naming conventions  
+- DLP policy rules  
+- Role assignments  
+- Logging/monitoring processes  
+
+📸 Screenshot: Governance document stored in SharePoint.
+

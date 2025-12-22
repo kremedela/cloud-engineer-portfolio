@@ -1,0 +1,89 @@
+# 🧪 Basic Power Automate Flow (Step-by-Step)
+
+## Step 1 — Navigate to Power Automate
+1. Go to **https://make.powerautomate.com**
+2. Select your environment.
+
+📸 *Screenshot: Power Automate home page*
+
+---
+
+## Step 2 — Create a New Automated Cloud Flow
+1. Click **Create**  
+2. Select **Automated cloud flow**  
+3. Name the flow: `Basic Notification Flow`  
+4. Choose a trigger:
+   - **SharePoint → When an item is created**  
+   - OR **Dataverse → When a row is added**  
+   - OR **Outlook → When a new email arrives**
+
+📸 *Screenshot: Automated cloud flow setup dialog*
+
+---
+
+## Step 3 — Configure Trigger
+1. Select the site/table/mailbox  
+2. Pick the list/table/folder to monitor  
+3. Click **Create**
+
+📸 *Screenshot: Trigger settings panel*
+
+---
+
+## Step 4 — Add an Action
+1. Click **+ New Step**  
+2. Choose one of the following examples:
+   - **Send an email (V2)**  
+   - **Add a row to Dataverse**  
+   - **Post message in Teams**  
+
+📸 *Screenshot: Adding an action*
+
+---
+
+## Step 5 — Map Dynamic Content
+1. Inside the action, click in a field  
+2. Add fields from Dynamic Content such as:
+   - Title  
+   - Created By  
+   - Description  
+
+📸 *Screenshot: Using dynamic content fields*
+
+---
+
+## Step 6 — Save and Test the Flow
+1. Click **Save**  
+2. Click **Test → Manually**  
+3. Trigger the event:
+   - Add new item  
+   - Send an email  
+   - Create new Dataverse record  
+
+📸 *Screenshot: Flow test monitor screen*
+
+---
+
+## Step 7 — Review Run History
+1. Open the **Flow run history** panel  
+2. Check status:
+   - Succeeded  
+   - Failed  
+   - Running  
+
+3. Inspect inputs/outputs as needed.
+
+📸 *Screenshot: Run history view*
+
+---
+
+## Step 8 — Turn Flow On / Off
+1. On the flow page, toggle **Enabled**  
+2. Disable when not needed.
+
+📸 *Screenshot: Flow enable/disable toggle*
+
+---
+
+## ✔ End of Lab
+You now have a working automated cloud flow that triggers from real activity.

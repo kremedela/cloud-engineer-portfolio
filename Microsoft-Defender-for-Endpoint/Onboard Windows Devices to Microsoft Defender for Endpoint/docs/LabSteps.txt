@@ -1,0 +1,105 @@
+========================================================
+Lab: Onboard Windows Devices to Microsoft Defender for Endpoint
+========================================================
+
+Step 1 — Download the Onboarding Package
+----------------------------------------
+1. Log into https://security.microsoft.com
+2. Go to Settings → Endpoints → Onboarding
+3. Select "Windows 10, Windows 11, and Windows Server"
+4. Choose: Local script (recommended for lab testing)
+5. Click "Download onboarding package"
+6. Save the .zip file to your test machine
+
+📸 Screenshot #1: Defender onboarding page
+📸 Screenshot #2: Onboarding package downloaded
+
+--------------------------------------------------------
+
+Step 2 — Extract and Run the Onboarding Script
+----------------------------------------------
+1. Extract the .zip file
+2. Open PowerShell *as Administrator*
+3. Navigate into the unzipped folder
+4. Run:
+
+    .\WindowsDefenderATPOnboardingScript.cmd
+
+5. Wait for the script to complete (approx 10–30 seconds)
+
+📸 Screenshot #3: Onboarding script running
+
+--------------------------------------------------------
+
+Step 3 — Confirm Onboarding Status (PowerShell)
+------------------------------------------------
+Run each of the following commands:
+
+1. Check Defender status:
+    Get-MpComputerStatus | Select AMRunningMode, IsTamperProtected, AntivirusSignatureLastUpdated
+
+2. Confirm MDE sensor:
+    sc.exe query sense
+
+3. Confirm onboarding registry key:
+    Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows Advanced Threat Protection" | Select onboardingstate
+
+4. Trigger a quick scan:
+    Start-MpScan -ScanType QuickScan
+
+📸 Screenshot #4: Successful MDE onboarding state
+📸 Screenshot #5: Sense service running
+
+--------------------------------------------------------
+
+Step 4 — Validate Device Appears in Defender Portal
+----------------------------------------------------
+1. Return to https://security.microsoft.com
+2. Go to Endpoints → Devices
+3. Search for your computer name
+4. Confirm:
+
+   - Sensor state = Active  
+   - Onboarding status = Successfully onboarded  
+   - Last seen < 5 minutes ago  
+
+📸 Screenshot #6: Device inventory confirmation
+
+--------------------------------------------------------
+
+Step 5 — Trigger Initial Alerts (Optional)
+------------------------------------------
+To test data ingestion:
+
+1. Open PowerShell as admin
+2. Use the MDE test alert:
+
+    Invoke-WebRequest -Uri https://aka.ms/MDETestAlert -OutFile "C:\temp\mde-test.exe"
+    Start-Process "C:\temp\mde-test.exe"
+
+3. Go to Defender → Incidents → Confirm alert is generated
+
+📸 Screenshot #7: Test alert
+
+--------------------------------------------------------
+
+Step 6 — Run Automated Verification Script
+------------------------------------------
+From your scripts folder:
+
+    .\onboard-endpoint.ps1
+
+This script will validate:
+
+- Sense service  
+- Cloud connection  
+- AV mode  
+- ATP onboarding state  
+- Last signature update  
+
+📸 Screenshot #8: Verification script results
+
+--------------------------------------------------------
+
+END OF LAB
+========================================================

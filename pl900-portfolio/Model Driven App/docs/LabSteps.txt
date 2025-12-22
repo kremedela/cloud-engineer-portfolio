@@ -1,0 +1,121 @@
+# Model Driven App
+
+## 📌 Prerequisites
+- Dataverse tables created (from Lab 4)
+- Dataverse RBAC configured (from Lab 5)
+- Access to Power Apps Maker Portal
+
+---
+
+## ✅ Step 1 — Create a New Model-Driven App
+
+1. Go to:  
+   https://make.powerapps.com
+2. Select your environment  
+3. Click **Apps** → **New App** → **Model-driven app**
+4. Name it:  
+   **MM Operations Manager**
+5. Choose **Modern App Designer**
+6. Click **Create**
+
+---
+
+## ✅ Step 2 — Add Dataverse Tables
+
+Inside the designer:
+
+1. Click **Add → Pages**
+2. Select:
+   - **Table-based view and form**
+3. Choose the tables:
+   - IncidentTracking  
+   - EmployeeDirectory (example)  
+   - Assets (optional)
+4. Click **Add**
+
+---
+
+## ✅ Step 3 — Configure the Sitemap Navigation
+
+1. Select **Navigation**
+2. Rename the main area:
+   - **Operations**
+3. Create group names:
+   - **Incident Management**
+   - **Employee Records**
+
+4. Move tables under the correct groups:
+   - IncidentTracking → Incident Management  
+   - EmployeeDirectory → Employee Records  
+
+5. Save
+
+---
+
+## ✅ Step 4 — Modify Views
+
+1. Open **IncidentTracking → Views**
+2. Edit the *Active Incidents* view:
+   - Add columns:
+     - Priority  
+     - AssignedTo  
+     - Status  
+   - Add filter:
+     - Status ≠ “Closed”
+
+3. Save → Publish
+
+---
+
+## ✅ Step 5 — Modify Forms
+
+1. Open **IncidentTracking → Forms**
+2. Edit the main form:
+   - Add sections:
+     - *Incident Details*
+     - *Assignment*
+   - Add fields:
+     - Title
+     - Description
+     - Priority
+     - AssignedTo
+     - Status
+
+3. Save → Publish
+
+---
+
+## ✅ Step 6 — Add Dashboards (Optional but recommended)
+
+1. Go to **Dashboards**
+2. Create:
+   - **Incident Overview Dashboard**
+3. Add components:
+   - Chart: Incidents by Status
+   - Chart: Incidents by Priority
+   - List: My Active Incidents
+
+4. Publish
+
+---
+
+## ✅ Step 7 — Publish the Entire App
+
+1. Click **Publish** (top right)
+2. Click **Play** to validate functionality
+
+---
+
+## ✅ Step 8 — Secure the App with RBAC
+
+1. Open the app settings  
+2. Go to **Share**
+3. Assign access to the role:
+   - **MM Operations Analyst** (from Lab 5)
+4. Verify only users with this role can see the app
+
+---
+
+## 🎉 End of Lab 6
+You now have a fully working Model-Driven App for the MM Operations workflow.
+

@@ -1,0 +1,69 @@
+============================================================
+SC-300 — Create Access and Session Policies in MDCA
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Identify Cloud Apps
+------------------------------------------------------------
+1. Navigate to MDCA → Cloud Apps
+2. Select applications for policy application
+3. Review app risk and sensitivity
+
+📸 Screenshot: /screenshots/01-cloud-apps.png
+
+------------------------------------------------------------
+Step 2 — Create Access Policies
+------------------------------------------------------------
+1. Navigate to MDCA → Control → Policies → Access Policies
+2. Click "Create Policy"
+3. Name: "SC-300 Access Policy"
+4. Select users/groups and cloud apps
+5. Configure conditions (e.g., location, device)
+6. Define actions (monitor, block, alert)
+7. Save policy
+
+📸 Screenshot: /screenshots/02-access-policy.png
+
+------------------------------------------------------------
+Step 3 — Create Session Policies
+------------------------------------------------------------
+1. Navigate to MDCA → Control → Policies → Session Policies
+2. Click "Create Policy"
+3. Name: "SC-300 Session Policy"
+4. Configure monitoring or control actions (e.g., block download, restrict copy/paste)
+5. Assign targeted users/groups
+6. Save policy
+
+📸 Screenshot: /screenshots/03-session-policy.png
+
+------------------------------------------------------------
+Step 4 — Assign Policies to Users/Groups
+------------------------------------------------------------
+1. Navigate to each policy → Assign
+2. Select internal and guest users
+3. Confirm policy is enabled
+
+📸 Screenshot: /screenshots/04-policy-assignment.png
+
+------------------------------------------------------------
+Step 5 — Test Policy Enforcement
+------------------------------------------------------------
+1. Sign in as internal test user → perform actions
+2. Sign in as guest test user → perform actions
+3. Confirm policies are enforced (blocked, monitored, restricted)
+
+📸 Screenshot: /screenshots/05-policy-enforcement.png
+
+------------------------------------------------------------
+Step 6 — Review Audit Logs
+------------------------------------------------------------
+1. Navigate to MDCA → Activity log
+2. Filter by policies and user activities
+3. Confirm events match policy enforcement
+
+📸 Screenshot: /screenshots/06-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

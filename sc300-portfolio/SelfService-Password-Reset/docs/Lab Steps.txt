@@ -1,0 +1,60 @@
+Lab Steps
+
+Step 1 — Review SSPR Default Settings
+
+Log into the Azure Portal.
+
+Navigate to Microsoft Entra → Password reset → Properties.
+
+Review current SSPR configuration: enabled users, groups, and authentication methods.
+
+📸 Screenshot #1: SSPR properties overview (/screenshots/01-sspr-overview.png)
+
+Step 2 — Enable SSPR for Users or Groups
+
+Go to Microsoft Entra → Password reset → Properties → Enable SSPR.
+
+Select All users or Selected groups for password reset.
+
+Save changes.
+
+📸 Screenshot #2: Enable SSPR for users/groups (/screenshots/02-sspr-enable.png)
+
+Step 3 — Configure Authentication Methods
+
+Navigate to Microsoft Entra → Password reset → Authentication methods.
+
+Choose how many methods are required for password reset (e.g., 2 methods).
+
+Configure available methods: mobile app, email, security questions, SMS, or authenticator app.
+
+📸 Screenshot #3: SSPR authentication methods (/screenshots/03-sspr-auth-methods.png)
+
+Step 4 — Configure Registration and Notifications
+
+Go to Microsoft Entra → Password reset → Registration.
+
+Require users to register methods before using SSPR.
+
+Configure notifications for administrators on password resets.
+
+📸 Screenshot #4: SSPR registration and notifications (/screenshots/04-sspr-registration.png)
+
+Step 5 — Test SSPR Using a Test User
+
+Log in as a test user at https://passwordreset.microsoftonline.com/
+.
+
+Attempt to reset password using configured methods.
+
+Confirm reset is successful and notifications are sent.
+
+📸 Screenshot #5: Test user SSPR reset page (/screenshots/05-sspr-test.png)
+
+Step 6 — Monitor SSPR Usage and Logs
+
+Navigate to Microsoft Entra → Password reset → Audit logs.
+
+Review recent password reset events, including successes and failures.
+
+📸 Screenshot #6: SSPR audit logs (/screenshots/06-sspr-logs.png)

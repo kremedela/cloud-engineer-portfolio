@@ -1,0 +1,65 @@
+============================================================
+SC-300 — Configure API Permissions
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Register Test Application
+------------------------------------------------------------
+1. Navigate to Entra Admin Center → App Registrations
+2. Click "New Registration"
+3. Name: "SC-300 Test App"
+4. Redirect URI (optional for delegated permissions)
+5. Click "Register"
+
+📸 Screenshot: /screenshots/01-register-app.png
+
+------------------------------------------------------------
+Step 2 — Configure Delegated Permissions
+------------------------------------------------------------
+1. Select the registered app
+2. Go to API Permissions → Add a permission
+3. Choose Microsoft Graph → Delegated Permissions
+4. Select required scopes (e.g., User.Read, Mail.Read)
+5. Click Add Permissions
+
+📸 Screenshot: /screenshots/02-delegated-permissions.png
+
+------------------------------------------------------------
+Step 3 — Configure Application Permissions
+------------------------------------------------------------
+1. Add a permission → Microsoft Graph → Application Permissions
+2. Select required app-only scopes (e.g., User.Read.All)
+3. Click Add Permissions
+
+📸 Screenshot: /screenshots/03-application-permissions.png
+
+------------------------------------------------------------
+Step 4 — Grant Admin Consent
+------------------------------------------------------------
+1. Click "Grant admin consent for <Tenant>"
+2. Confirm consent
+3. Validate status changes to "Granted"
+
+📸 Screenshot: /screenshots/04-admin-consent.png
+
+------------------------------------------------------------
+Step 5 — Test Permissions
+------------------------------------------------------------
+1. Use Graph Explorer, Postman, or PowerShell to request a token
+2. Call APIs to verify delegated and app permissions
+
+📸 Screenshot: /screenshots/05-test-api.png
+
+------------------------------------------------------------
+Step 6 — Review Audit Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Audit Logs
+2. Filter by App Registration → Permissions
+3. Validate changes and admin consent
+
+📸 Screenshot: /screenshots/06-audit-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

@@ -1,0 +1,58 @@
+============================================================
+SC-300 — Assign Managed Identity to Azure Resource
+Full Detailed Instructions
+============================================================
+
+------------------------------------------------------------
+Step 1 — Select or Create Azure Resource
+------------------------------------------------------------
+1. Navigate to Azure Portal
+2. Select an existing resource (App Service, VM, or Function App)
+3. Ensure you have Contributor or Owner permissions
+
+📸 Screenshot: /screenshots/01-select-resource.png
+
+------------------------------------------------------------
+Step 2 — Enable Managed Identity
+------------------------------------------------------------
+1. Open the resource
+2. Navigate to "Identity"
+3. Enable:
+   - System-assigned identity OR
+   - User-assigned identity
+4. Save changes
+
+📸 Screenshot: /screenshots/02-enable-identity.png
+
+------------------------------------------------------------
+Step 3 — Assign RBAC Role
+------------------------------------------------------------
+1. Navigate to target resource (e.g., Key Vault, Storage Account)
+2. Open "Access control (IAM)"
+3. Assign role (e.g., Reader, Contributor)
+4. Select the managed identity as principal
+5. Save role assignment
+
+📸 Screenshot: /screenshots/03-assign-role.png
+
+------------------------------------------------------------
+Step 4 — Validate Managed Identity Access
+------------------------------------------------------------
+1. Use Azure CLI or application code to access resource
+2. Confirm access without using secrets
+3. Verify successful authentication
+
+📸 Screenshot: /screenshots/04-validate-access.png
+
+------------------------------------------------------------
+Step 5 — Review Sign-In Logs
+------------------------------------------------------------
+1. Navigate to Entra ID → Sign-in logs
+2. Filter by managed identity
+3. Review authentication details
+
+📸 Screenshot: /screenshots/05-signin-logs.png
+
+------------------------------------------------------------
+End of Lab
+============================================================

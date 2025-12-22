@@ -1,0 +1,39 @@
+🧪 Lab Steps
+
+Step 1 — Access Microsoft 365 Defender
+Open your browser and navigate to https://security.microsoft.com
+.
+Sign in with your administrator account.
+
+📸 Screenshot #1: Defender XDR dashboard (/screenshots/01-dashboard.png)
+
+Step 2 — Review Security Reports
+Go to Reports → Security Reports.
+Review alerts generated over the past 7 days. Focus on high and medium severity alerts.
+
+📸 Screenshot #2: Security Reports page (/screenshots/02-security-reports.png)
+
+Step 3 — Analyze Threats
+Select an alert to open the detailed report. Review affected users, devices, and attack vectors.
+
+📸 Screenshot #3: Threat details (/screenshots/03-threat-details.png)
+
+Step 4 — Respond to Threats
+Use Actions → Investigate → Remediate to:
+
+Quarantine infected devices
+
+Reset compromised accounts
+
+Block suspicious files or URLs
+
+📸 Screenshot #4: Remediation actions (/screenshots/04-remediation.png)
+
+Step 5 — Document Findings
+Export the report as CSV or PDF for audit purposes.
+Add notes for follow-up actions or recurring issues.
+
+📸 Screenshot #5: Exported report (/screenshots/05-export-report.png)
+
+Step 6 — Optional Automation
+Use PowerShell to list recent alerts and mark them as resolved:

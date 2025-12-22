@@ -1,0 +1,92 @@
+🧪 Lab Steps (Full Detailed Instructions — Plain Text)
+
+Step 1 — Review Existing Enterprise Group Structure
+Log into Azure Portal.
+Navigate to Microsoft Entra → Groups.
+Identify current group issues:
+
+Inconsistent naming patterns
+
+Security groups mixed with M365 groups
+
+Groups without owners
+Document findings in your /docs folder.
+📸(/screenshots/01-current-groups.png)
+
+Step 2 — Build a New Standardized Group Architecture
+Create the following containers or categories (document in /docs):
+
+Security Groups
+
+Microsoft 365 Groups
+
+Department Groups (HR, IT, Finance)
+
+Dynamic Attribute-Based Groups
+
+Now create sample groups:
+
+SG-CORP-IT-Admins
+
+M365-CORP-Announcements
+
+SG-HR-Employees
+
+SG-IT-Devices (Dynamic)
+
+Navigate to Microsoft Entra → Groups → New Group.
+Create each group with proper naming conventions.
+📸(/screenshots/02-new-groups.png)
+
+Step 3 — Create an Administrative Unit for Delegated Management
+Navigate to Microsoft Entra → Administrative Units.
+Click Create.
+Name the AU:
+AU-GroupManagement-IT
+Add groups from Step 2 to this AU.
+📸(/screenshots/03-au.png)
+
+Step 4 — Create a Custom "Group Lifecycle Manager" Role
+Navigate to Microsoft Entra → Roles & administrators → New custom role.
+Name: Group Lifecycle Manager
+Description: Allows group creation, modification, and membership changes within a defined AU.
+Permissions to add:
+
+microsoft.directory/groups/create
+
+microsoft.directory/groups/basic/update
+
+microsoft.directory/groups.members/update
+
+Click Create.
+📸(/screenshots/04-custom-role.png)
+
+Step 5 — Assign the Custom Role Scoped to the Administrative Unit
+Open your new custom role → Assignments → Add assignment.
+Choose the AU from Step 3: AU-GroupManagement-IT
+Choose a delegated test user account:
+delegated.admin@yourdomain.com
+Assign the role.
+📸(/screenshots/05-role-assignment.png)
+
+Step 6 — Validate Delegated Permissions Using the Test User
+Open an InPrivate or Incognito window.
+Log in as the delegated admin user.
+Navigate to Microsoft Entra → Groups.
+Validate the user can:
+
+Create groups only within the AU
+
+Modify group members in AU
+
+View only AU-scoped groups
+
+Validate the user cannot:
+
+Manage global groups
+
+Modify groups outside the AU
+
+Access tenant-wide settings
+📸(/screenshots/06-allowed.png)
+📸(/screenshots/07-denied.png)

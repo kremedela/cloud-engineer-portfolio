@@ -1,0 +1,88 @@
+# Automated Document Generation  
+## Step-by-Step Instructions
+
+---
+
+# Exercise 1 — Create a Word Template
+1. Open **Microsoft Word**.
+2. Insert standard document content such as:
+   - Title
+   - Sections
+   - Tables
+   - Signature block
+3. Add **Content Controls** (Developer tab → Rich Text / Plain Text controls):
+   - <<EmployeeName>>
+   - <<StartDate>>
+   - <<Manager>>
+   - <<Department>>
+   - <<Notes>>
+4. Save the file as: `OnboardingTemplate.docx`
+
+📸 Screenshot: Word template showing content controls.
+
+---
+
+# Exercise 2 — Upload Template to SharePoint/OneDrive
+1. Go to your SharePoint Document Library or OneDrive folder.
+2. Upload: **OnboardingTemplate.docx**
+3. Copy the file path—needed for Power Automate.
+
+📸 Screenshot: Template stored in SharePoint/OneDrive.
+
+---
+
+# Exercise 3 — Create a Power Automate Flow
+1. Go to https://make.powerautomate.com  
+2. Select **Create → Automated Cloud Flow** or **Instant Flow**.
+3. Choose trigger:
+   - **Manual button** *(recommended)*  
+   - OR **When a new item is created** (SharePoint List)  
+
+📸 Screenshot: Flow creation screen.
+
+---
+
+# Exercise 4 — Add “Populate a Word Template” Action
+1. Click **+ New Step**  
+2. Search for **Word Online (Business)**  
+3. Select: **Populate a Word Template**  
+4. Choose your uploaded template  
+5. Map each content control:
+   - EmployeeName → dynamic field  
+   - StartDate → dynamic date  
+   - Manager → dynamic field  
+   - Department → dynamic field  
+   - Notes → dynamic text  
+
+📸 Screenshot: Populate Word Template mapping screen.
+
+---
+
+# Exercise 5 — Save or Convert Document
+1. Add action: **Create File (SharePoint or OneDrive)**  
+2. File Name: `OnboardingPacket_<EmployeeName>.docx`  
+3. If needed, convert to PDF:
+   - Add action: **Convert Word Document to PDF**  
+
+📸 Screenshot: Create File action.
+
+---
+
+# Exercise 6 — Test the Flow
+1. Run the flow manually  
+2. Enter test values  
+3. Check generated document in output location  
+4. Confirm fields correctly populate
+
+📸 Screenshot: Generated PDF/Docx file.
+
+---
+
+# Exercise 7 — Optional: Trigger from Form or SharePoint
+Choose optional enhancements:
+- Trigger from **Microsoft Forms** response  
+- Trigger from a **SharePoint List**  
+- Auto-email the generated document using **Outlook connector**  
+
+📸 Screenshot: Extended workflow branch.
+
