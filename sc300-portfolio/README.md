@@ -6,7 +6,7 @@
 
 Hi, I’m Euron Pennyman, a Microsoft Certified Identity and Access Administrator (SC-300) dedicated to designing and implementing secure, scalable identity solutions.
 
-I specialize in Azure Active Directory, Conditional Access, and Zero Trust security, helping organizations protect digital assets while enabling seamless access for users. My focus is on reducing risk, enforcing governance, and streamlining authentication across cloud and hybrid environments.
+I specialize in Microsoft Entra ID, Conditional Access, and Zero Trust security, PIM, Identity Protection, Enterprise Applications, and helping organizations protect digital assets while enabling seamless access for users. My focus is on reducing risk, enforcing governance, and streamlining authentication across cloud and hybrid environments.
 
 I view identity not just as credentials — but as the foundation of trust, security, and productivity in modern enterprise ecosystems.
 

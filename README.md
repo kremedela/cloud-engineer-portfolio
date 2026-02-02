@@ -27,7 +27,7 @@ Each section aligns with a core technical area or Microsoft certification and in
 | 🌍 [Terraform Portfolio](./terraform-portfolio) | Infrastructure as Code | Azure IaC, State Management, Modules |
 | 🔐 [SC-300 Portfolio](./sc300-portfolio) | Identity & Access Management | Azure AD, Conditional Access, PIM |
 | 💼 [MS-102 Portfolio](./ms102-portfolio) | Microsoft 365 Administration | Exchange, Intune, Defender Policies |
-| ☁️ [AZ-104 Portfolio](./az104-portfolio) | Azure Administration | VM Deployment, Monitoring, Backups |
+| ☁️ [AZ-104 Portfolio](./az104-portfolio) | Azure Administration | VM Deployment, Monitoring, Backups, Networking |
 | 💻 [AZ-204 Portfolio](./az204-portfolio) | Azure Development | Functions, APIs, Logic Apps |
 | 🔒 [AZ-500 Portfolio](./az500-portfolio) | Azure Security Engineering | Sentinel, Key Vault, Security Center |
 | 🏛️ [AZ-305 Portfolio](./az305-portfolio) | Azure Solutions Architecture | Design Patterns, Networking, Security, High Availability, Cost Management |
