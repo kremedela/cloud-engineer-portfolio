@@ -1,0 +1,83 @@
+Step 1 — Access Active Incidents
+--------------------------------
+1. Log into https://security.microsoft.com
+2. Navigate to Incidents & alerts → Incidents
+3. Review open incidents and select one with multiple correlated alerts
+
+Screenshot #1: Active incidents list
+(/screenshots/01-active-incidents.png)
+
+--------------------------------------------------
+
+Step 2 — Review Correlated Alerts
+---------------------------------
+1. Click into the selected incident
+2. Review the list of correlated alerts
+3. Note severity, category, and affected entities
+4. Identify which alerts originated from Endpoint, Email, or Identity
+
+Screenshot #2: Correlated alerts overview
+(/screenshots/02-correlated-alerts.png)
+
+--------------------------------------------------
+
+Step 3 — Guided Hunting Across Entities
+---------------------------------------
+1. In the incident view, click "Investigate with guided hunting"
+2. Run prebuilt queries for:
+   - User activity
+   - Device telemetry
+   - Email and message trace
+   - Cloud app activity
+3. Pivot between entities to identify suspicious behavior
+
+Screenshot #3: Guided hunting queries
+(/screenshots/03-guided-hunting.png)
+
+--------------------------------------------------
+
+Step 4 — Identify Root Cause and Scope
+--------------------------------------
+1. Review all findings from guided hunting
+2. Identify:
+   - Initial compromised entity
+   - Actions taken by attacker
+   - Potential lateral movement
+   - Number of impacted devices/users
+
+Screenshot #4: Incident blast radius
+(/screenshots/04-incident-scope.png)
+
+--------------------------------------------------
+
+Step 5 — Document and Determine Response
+----------------------------------------
+1. In the incident, add investigation notes
+2. Determine response action:
+   - Resolve incident
+   - Escalate to senior SOC
+   - Isolate affected devices
+   - Notify impacted users
+3. Update incident status accordingly
+
+Screenshot #5: Incident notes and response
+(/screenshots/05-incident-response.png)
+
+--------------------------------------------------
+
+Step 6 — Export Incident Details Using PowerShell
+-------------------------------------------------
+Open PowerShell 7+ as Administrator and run:
+
+.\guided-hunting.ps1
+
+This script exports:
+- Incident ID
+- Incident name
+- Severity
+- Correlated alerts
+- Affected entities
+- Created/Resolved timestamps
+
+Screenshot #6: Exported incident CSV
+(/screenshots/06-incident-export.png)

@@ -1,0 +1,112 @@
+Step 1 — Access Microsoft Defender XDR Alerts
+Log into https://security.microsoft.com
+From the left navigation, select Incidents & alerts → Alerts
+Review the list of active and resolved alerts.
+
+Focus on the following fields:
+• Alert name
+• Severity
+• Status
+• Service source
+• Category
+
+Screenshot #1: Defender XDR alerts dashboard
+(/screenshots/01-alert-dashboard.png)
+
+--------------------------------------------------
+
+Step 2 — Analyze Alert Details
+Select an alert with Medium or High severity.
+Review the alert summary including:
+• Description
+• Detection source
+• MITRE ATT&CK technique
+• First seen and last updated timestamps
+
+Identify whether the alert originated from:
+• Endpoint
+• Email
+• Identity
+• Cloud app
+
+Screenshot #2: Alert overview and details
+(/screenshots/02-alert-details.png)
+
+--------------------------------------------------
+
+Step 3 — Investigate Affected Entities
+Within the alert, review the impacted entities:
+• User account
+• Device name
+• Mailbox
+• IP address
+
+Click into each entity to review:
+• Sign-in activity
+• Device risk level
+• Associated alerts
+• Recent actions
+
+Screenshot #3: Affected entity investigation
+(/screenshots/03-entity-investigation.png)
+
+--------------------------------------------------
+
+Step 4 — Review Alert Evidence and Timeline
+Scroll to the Evidence and Timeline section.
+Review:
+• File hashes
+• URLs
+• Commands executed
+• Email artifacts (if applicable)
+
+Determine:
+• How the alert was triggered
+• Whether activity is suspicious or expected
+
+Screenshot #4: Alert evidence and timeline
+(/screenshots/04-alert-evidence.png)
+
+--------------------------------------------------
+
+Step 5 — Determine Response Action
+Based on findings, choose one action:
+• Mark alert as resolved (true positive)
+• Mark alert as resolved (false positive)
+• Leave alert active for further investigation
+
+Add a comment documenting:
+• Reason for decision
+• Findings
+• Next steps (if any)
+
+Screenshot #5: Alert resolution and comments
+(/screenshots/05-alert-resolution.png)
+
+--------------------------------------------------
+
+Step 6 — Review Alert Correlation with Incidents
+Navigate to Incidents & alerts → Incidents.
+Verify whether the alert is linked to an incident.
+Review how Defender XDR correlates alerts across workloads.
+
+Screenshot #6: Incident correlation view
+(/screenshots/06-incident-correlation.png)
+
+--------------------------------------------------
+
+Step 7 — Export Alerts Using PowerShell (Optional)
+Open PowerShell 7+ as Administrator.
+Navigate to the /scripts folder.
+Run the defender-alert-report.ps1 script.
+
+Validate that a CSV file is generated containing:
+• Alert ID
+• Title
+• Severity
+• Status
+• Category
+• Created Date
+
+Screenshot #7: Exported alert report
+(/screenshots/07-alert-report.png)

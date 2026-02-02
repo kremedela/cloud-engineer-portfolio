@@ -1,0 +1,1 @@
+Detailed lab steps for 'Configure the App Connector for Microsoft 365' go here.

@@ -1,0 +1,1 @@
+Detailed lab steps for 'Implement and Manage Email & Collaboration Protection using Defender for Office 365' go here.

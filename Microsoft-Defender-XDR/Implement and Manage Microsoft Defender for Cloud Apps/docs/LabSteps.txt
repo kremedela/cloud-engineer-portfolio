@@ -1,0 +1,1 @@
+Detailed lab steps for 'Implement and Manage Microsoft Defender for Cloud Apps' go here.

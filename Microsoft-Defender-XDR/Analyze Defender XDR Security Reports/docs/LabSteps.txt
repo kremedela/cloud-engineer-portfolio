@@ -1,0 +1,74 @@
+# Lab: Analyze Defender XDR Security Reports
+
+## Step 1 — Access Security Reports
+1. Log into https://security.microsoft.com
+2. Navigate to **Reports → Security reports**
+3. Review available reports:
+   - Alert summary by category
+   - Incident trends
+   - Detection sources
+4. Focus on reports with **High** and **Medium** severity alerts
+
+📸 Screenshot #1: Security reports dashboard
+(/screenshots/01-security-reports.png)
+
+---
+
+## Step 2 — Analyze Trends
+1. Review alert trends over the last 7–30 days
+2. Identify:
+   - Most frequent alert categories
+   - Sources of recurring alerts (Endpoint, Email, Identity, Cloud)
+   - Any spike in specific alert types
+
+📸 Screenshot #2: Trend analysis chart
+(/screenshots/02-trend-analysis.png)
+
+---
+
+## Step 3 — Identify Patterns and Recurring Alerts
+1. Click into each alert type
+2. Review:
+   - Affected entities
+   - Correlated incidents
+   - MITRE ATT&CK mapping
+3. Note any recurring issues that may require remediation or policy changes
+
+📸 Screenshot #3: Alert pattern identification
+(/screenshots/03-recurring-alerts.png)
+
+---
+
+## Step 4 — Prioritize Areas for Remediation
+1. Rank findings based on:
+   - Severity
+   - Impact on users/devices
+   - Frequency of occurrence
+2. Create a short remediation plan
+3. Include which policies, endpoints, or users need attention
+
+📸 Screenshot #4: Prioritized remediation plan
+(/screenshots/04-remediation-plan.png)
+
+---
+
+## Step 5 — Document Recommendations
+1. Add notes in Defender portal or internal SOC tracker
+2. Include:
+   - Identified risks
+   - Suggested mitigations
+   - Responsible teams
+3. Ensure findings are actionable
+
+📸 Screenshot #5: Documented recommendations
+(/screenshots/05-documentation.png)
+
+---
+
+## Step 6 — Export Reports Using PowerShell
+1. Open PowerShell 7+ as Administrator
+2. Navigate to `/scripts`
+3. Run the script:
+
+```powershell
+.\defender-report-export.ps1
